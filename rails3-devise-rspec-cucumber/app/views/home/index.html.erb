@@ -1,0 +1,9 @@
+<h3>Home</h3>
+<% @users.each do |user| %>
+  <p>User: <%=link_to user.name, user %></p>
+<% end %>
+
+<p>List the books: <%= link_to 'Books', books_path %>
+ <% if user_signed_in? %>
+<p>Add a new book: <%= link_to 'Add new', new_book_path %></p>
+<% end %>

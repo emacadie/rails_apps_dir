@@ -1,0 +1,15 @@
+== Welcome to Rails Apps
+
+This is a copy of one of the RailsApps. They have great templates. I started this one 
+in June, 2012. It might be out of date when you read it.  
+
+You can read more about Action Pack in
+link: http://railsapps.github.com  
+
+
+
+
+
+
+
+

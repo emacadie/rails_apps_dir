@@ -1,0 +1,7 @@
+http://localhost:3000/users/edit
+http://localhost:3000/books/new
+http://localhost:3000/books
+http://localhost:3000/books/4
+http://localhost:3000/books/4/edit
+Destroy is delete to http://localhost:3000/books/4
+You need to sign in or sign up before continuing.
