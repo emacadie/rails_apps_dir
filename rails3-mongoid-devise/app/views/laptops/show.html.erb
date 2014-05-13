@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Maker:</b>
+  <%= @laptop.maker %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @laptop.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_laptop_path(@laptop) %> |
+<%= link_to 'Back', laptops_path %>
