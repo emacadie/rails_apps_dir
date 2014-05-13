@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  started: 2012-02-03
+
+two:
+  name: MyString
+  started: 2012-02-03
