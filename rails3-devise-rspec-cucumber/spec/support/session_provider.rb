@@ -24,13 +24,18 @@ include Capybara::RSpecMatchers
       click_button "Sign in"
 
       page.should have_content("Signed in successfully.")
+
+
+
+
+
 =begin
-      puts "Page is a #{page.class}"
-      puts "page.mode: #{page.mode} which is a #{page.mode.class}"
-      puts "page.app: #{page.app.class}" 
-      puts "page.app.methods: #{page.app.methods.sort} "
-      puts "page.app.instance_variable_names: #{page.app.instance_variable_names}"
-      puts "page.app.instance_variable_get(@mapping): #{page.app.instance_variable_get("@mapping")}"
+      puts "Page is a #{page.class}"                               # -> Page is a Capybara::Session
+      puts "page.mode: #{page.mode} which is a #{page.mode.class}" # -> page.mode: rack_test which is a Symbol
+      puts "page.app: #{page.app.class}"                           # -> page.app: Rack::URLMap 
+      # puts "page.app.methods: #{page.app.methods.sort} "
+      # puts "page.app.instance_variable_names: #{page.app.instance_variable_names}"
+      # puts "page.app.instance_variable_get(@mapping): #{page.app.instance_variable_get("@mapping")}"
 =end
       return page
     end
