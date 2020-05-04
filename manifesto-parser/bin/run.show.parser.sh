@@ -1,0 +1,1 @@
+ruby lib/show_parser.rb /home/ericm/github/manifesto-parser/input/shows.xml

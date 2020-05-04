@@ -1,0 +1,1 @@
+ruby lib/first_parser.rb /home/ericm/github/manifesto-parser/maps/map.xml
