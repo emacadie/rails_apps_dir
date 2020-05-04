@@ -1,0 +1,8 @@
+This is an app that will load info from Dividend Champion spreadsheets into Mongo.  
+
+I chose Mongo because it is always good to look at new things. Plus over time the columns change, so I figured it would be easier to go with Mongo than constantly add to the schema.  
+
+
+
+
+#- EOF

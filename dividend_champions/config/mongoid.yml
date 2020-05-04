@@ -1,0 +1,19 @@
+development_001:
+  sessions:
+    default:
+      database: dividend_champions_001
+      hosts:
+        - localhost:27017
+development:
+  sessions:
+    default:
+      database: dividend_champions
+      hosts:
+        - localhost:27017
+
+final:
+  sessions:
+    default:
+      database: dividend_champions_final
+      hosts:
+        - localhost:27017

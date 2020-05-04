@@ -1,0 +1,10 @@
+source :rubygems
+
+gem 'mongoid', '3.0.6'
+
+gem 'pry', '0.9.10'
+gem 'spreadsheet', '0.7.3'
+gem 'rspec', '2.11.0'
+gem 'genghisapp', '2.1.1', :group => [:development, :test]
+gem 'bson_ext', '1.7.0', :group => [:development, :test]
+#- EOF
