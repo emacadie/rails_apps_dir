@@ -1,0 +1,13 @@
+<h1>Landmarks#new</h1>
+<p>Find me in app/views/landmarks/new.html.erb</p>
+
+<%= form_for @landmark do |form| %>
+<p><%= form.label :name %> <% form.text_field :name %> </p>
+<p><%= form.label :cost %> <% form.text_field :cost %> </p>
+<%= form.submit %> or <%= link_to 'cancel', root_url %>
+<% end %>
+<p>
+<%= link_to 'Home', root_url %>
+</p>
+
+
