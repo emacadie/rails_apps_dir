@@ -1,0 +1,39 @@
+<h1>Listing wp_users</h1>
+
+<table>
+  <tr>
+    <th>User login</th>
+    <th>User pass</th>
+    <th>User nicename</th>
+    <th>User email</th>
+    <th>User url</th>
+    <th>User registered</th>
+    <th>User activation key</th>
+    <th>User status</th>
+    <th>Display name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wp_users.each do |wp_user| %>
+  <tr>
+    <td><%= wp_user.user_login %></td>
+    <td><%= wp_user.user_pass %></td>
+    <td><%= wp_user.user_nicename %></td>
+    <td><%= wp_user.user_email %></td>
+    <td><%= wp_user.user_url %></td>
+    <td><%= wp_user.user_registered %></td>
+    <td><%= wp_user.user_activation_key %></td>
+    <td><%= wp_user.user_status %></td>
+    <td><%= wp_user.display_name %></td>
+    <td><%= link_to 'Show', wp_user %></td>
+    <td><%= link_to 'Edit', edit_wp_user_path(wp_user) %></td>
+    <td><%= link_to 'Destroy', wp_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wp user', new_wp_user_path %>

@@ -1,0 +1,115 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Post author:</b>
+  <%= @wp_post.post_author %>
+</p>
+
+<p>
+  <b>Post date:</b>
+  <%= @wp_post.post_date %>
+</p>
+
+<p>
+  <b>Post date gmt:</b>
+  <%= @wp_post.post_date_gmt %>
+</p>
+
+<p>
+  <b>Post content:</b>
+  <%= @wp_post.post_content %>
+</p>
+
+<p>
+  <b>Post title:</b>
+  <%= @wp_post.post_title %>
+</p>
+
+<p>
+  <b>Post excerpt:</b>
+  <%= @wp_post.post_excerpt %>
+</p>
+
+<p>
+  <b>Post status:</b>
+  <%= @wp_post.post_status %>
+</p>
+
+<p>
+  <b>Comment status:</b>
+  <%= @wp_post.comment_status %>
+</p>
+
+<p>
+  <b>Ping status:</b>
+  <%= @wp_post.ping_status %>
+</p>
+
+<p>
+  <b>Post password:</b>
+  <%= @wp_post.post_password %>
+</p>
+
+<p>
+  <b>Post name:</b>
+  <%= @wp_post.post_name %>
+</p>
+
+<p>
+  <b>To ping:</b>
+  <%= @wp_post.to_ping %>
+</p>
+
+<p>
+  <b>Pinged:</b>
+  <%= @wp_post.pinged %>
+</p>
+
+<p>
+  <b>Post modified:</b>
+  <%= @wp_post.post_modified %>
+</p>
+
+<p>
+  <b>Post modified gmt:</b>
+  <%= @wp_post.post_modified_gmt %>
+</p>
+
+<p>
+  <b>Post content filtered:</b>
+  <%= @wp_post.post_content_filtered %>
+</p>
+
+<p>
+  <b>Post parent:</b>
+  <%= @wp_post.post_parent %>
+</p>
+
+<p>
+  <b>Guid:</b>
+  <%= @wp_post.guid %>
+</p>
+
+<p>
+  <b>Menu order:</b>
+  <%= @wp_post.menu_order %>
+</p>
+
+<p>
+  <b>Post type:</b>
+  <%= @wp_post.post_type %>
+</p>
+
+<p>
+  <b>Post mime type:</b>
+  <%= @wp_post.post_mime_type %>
+</p>
+
+<p>
+  <b>Comment count:</b>
+  <%= @wp_post.comment_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_wp_post_path(@wp_post) %> |
+<%= link_to 'Back', wp_posts_path %>

@@ -1,0 +1,53 @@
+
+
+I got php logging to work by setting perms for /home/ericm/public_html/logger to 777. Need to add www-data to group ericm
+
+Logging example: /home/ericm/public_html/wp-admin/admin.php
+    include('../logger/Logger.php');
+    
+    $logger = Logger::getLogger("main");
+    $logger->info("This is an informational message.");
+    $logger->warn("I'm not feeling so good...");
+
+
+    // Insert the path where you unpacked log4php
+    
+     
+    // Tell log4php to use our configuration file.
+    Logger::configure('../logger/config.xml');
+     
+    // Fetch a logger, it will inherit settings from the root logger
+    $log = Logger::getLogger('myLogger');
+     
+    // Start logging
+    $log->trace("My first message."); // Not logged because TRACE < WARN
+    $log->debug("My second message."); // Not logged because DEBUG < WARN
+    $log->info("My third message."); // Not logged because INFO < WARN
+    $log->warn("My fourth message."); // Logged because WARN >= WARN
+    $log->error("My fifth message."); // Logged because ERROR >= WARN
+    $log->fatal("My sixth message."); // Logged because FATAL >= WARN
+
+-----
+in database
+mysql> SET GLOBAL general_log = 'ON';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SET GLOBAL general_log = 'OFF';
+Query OK, 0 rows affected (0.07 sec)
+
+show global variables where variable_name like 'general_log';
+
+-rw-r----- 1 root  adm 26565 Jan 30 21:00 mysql.2013-01-30_21.00.48.log
+-rw-r----- 1 root  adm 40951 Jan 30 21:11 mysql.2013-01-30_21.11.33.log
+-rw-rw---- 1 mysql adm 59347 Jan 30 21:11 mysql.log
+-rw-r----- 1 root  adm 59347 Jan 30 21:11 mysql.2013-01-30_21.11.55.log
+root@finance:/var/log/mysql#
+
+Second file w/time stamp is front page
+Third is post #12
+
+   453 mysql.2013-01-30_21.00.48.log
+   588 mysql.2013-01-30_21.11.33.log
+   732 mysql.2013-01-30_21.11.55.log
+  1773 total
+

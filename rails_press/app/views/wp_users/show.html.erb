@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User login:</b>
+  <%= @wp_user.user_login %>
+</p>
+
+<p>
+  <b>User pass:</b>
+  <%= @wp_user.user_pass %>
+</p>
+
+<p>
+  <b>User nicename:</b>
+  <%= @wp_user.user_nicename %>
+</p>
+
+<p>
+  <b>User email:</b>
+  <%= @wp_user.user_email %>
+</p>
+
+<p>
+  <b>User url:</b>
+  <%= @wp_user.user_url %>
+</p>
+
+<p>
+  <b>User registered:</b>
+  <%= @wp_user.user_registered %>
+</p>
+
+<p>
+  <b>User activation key:</b>
+  <%= @wp_user.user_activation_key %>
+</p>
+
+<p>
+  <b>User status:</b>
+  <%= @wp_user.user_status %>
+</p>
+
+<p>
+  <b>Display name:</b>
+  <%= @wp_user.display_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_wp_user_path(@wp_user) %> |
+<%= link_to 'Back', wp_users_path %>

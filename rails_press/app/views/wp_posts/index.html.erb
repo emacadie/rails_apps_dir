@@ -1,0 +1,65 @@
+<h1>Listing wp_posts</h1>
+
+<table>
+  <tr>
+    <th>Post author</th>
+    <th>Post date</th>
+    <th>Post date gmt</th>
+    <th>Post content</th>
+    <th>Post title</th>
+    <th>Post excerpt</th>
+    <th>Post status</th>
+    <th>Comment status</th>
+    <th>Ping status</th>
+    <th>Post password</th>
+    <th>Post name</th>
+    <!-- th>To ping</th -->
+    <!-- th>Pinged</th -->
+    <th>Post modified</th>
+    <th>Post modified gmt</th>
+    <th>Post content filtered</th>
+    <th>Post parent</th>
+    <th>Guid</th>
+    <th>Menu order</th>
+    <th>Post type</th>
+    <th>Post mime type</th>
+    <th>Comment count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wp_posts.each do |wp_post| %>
+  <tr>
+    <td><%= wp_post.post_author %></td>
+    <td><%= wp_post.post_date %></td>
+    <td><%= wp_post.post_date_gmt %></td>
+    <td><%= wp_post.post_content %></td>
+    <td><%= wp_post.post_title %></td>
+    <td><%= wp_post.post_excerpt %></td>
+    <td><%= wp_post.post_status %></td>
+    <td><%= wp_post.comment_status %></td>
+    <td><%= wp_post.ping_status %></td>
+    <td><%= wp_post.post_password %></td>
+    <td><%= wp_post.post_name %></td>
+    <!-- td><%= wp_post.to_ping %></td -->
+    <!-- td><%= wp_post.pinged %></td -->
+    <td><%= wp_post.post_modified %></td>
+    <td><%= wp_post.post_modified_gmt %></td>
+    <td><%= wp_post.post_content_filtered %></td>
+    <td><%= wp_post.post_parent %></td>
+    <td><%= wp_post.guid %></td>
+    <td><%= wp_post.menu_order %></td>
+    <td><%= wp_post.post_type %></td>
+    <td><%= wp_post.post_mime_type %></td>
+    <td><%= wp_post.comment_count %></td>
+    <td><%= link_to 'Show', wp_post %></td>
+    <td><%= link_to 'Edit', edit_wp_post_path(wp_post) %></td>
+    <td><%= link_to 'Destroy', wp_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wp post', new_wp_post_path %>
