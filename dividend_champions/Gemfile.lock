@@ -23,7 +23,7 @@ GEM
       sinatra-mustache (~> 0.0.4)
       vegas (~> 0.1.8)
     i18n (0.6.1)
-    json (1.7.5)
+    json (1.7.7)
     method_source (0.8)
     mongo (1.7.0)
       bson (~> 1.7.0)
