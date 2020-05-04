@@ -1,0 +1,215 @@
+110conameu.csv::Basic Materials,Chemicals - Major Diversified
+111conameu.csv::Basic Materials,Synthetics
+112conameu.csv::Basic Materials,Agricultural Chemicals
+113conameu.csv::Basic Materials,Specialty Chemicals
+120conameu.csv::Basic Materials,Major Integrated Oil & Gas
+121conameu.csv::Basic Materials,Independent Oil & Gas
+122conameu.csv::Basic Materials,Oil & Gas Refining & Marketing
+123conameu.csv::Basic Materials,Oil & Gas Drilling & Exploration
+124conameu.csv::Basic Materials,Oil & Gas Equipment & Services
+125conameu.csv::Basic Materials,Oil & Gas Pipelines
+130conameu.csv::Basic Materials,Steel & Iron
+131conameu.csv::Basic Materials,Copper
+132conameu.csv::Basic Materials,Aluminum
+133conameu.csv::Basic Materials,Industrial Metals & Minerals
+134conameu.csv::Basic Materials,Gold
+135conameu.csv::Basic Materials,Silver
+136conameu.csv::Basic Materials,Nonmetallic Mineral Mining
+210conameu.csv::Conglomerates,Conglomerates
+310conameu.csv::Consumer Goods,Appliances
+311conameu.csv::Consumer Goods,Home Furnishings & Fixtures
+312conameu.csv::Consumer Goods,Housewares & Accessories
+313conameu.csv::Consumer Goods,Business Equipment
+314conameu.csv::Consumer Goods,Electronic Equipment
+315conameu.csv::Consumer Goods,Toys & Games
+316conameu.csv::Consumer Goods,Sporting Goods
+317conameu.csv::Consumer Goods,Recreational Goods, Other
+318conameu.csv::Consumer Goods,Photographic Equipment & Supplies
+320conameu.csv::Consumer Goods,Textile - Apparel Clothing
+321conameu.csv::Consumer Goods,Textile - Apparel Footwear & Accessories
+322conameu.csv::Consumer Goods,Rubber & Plastics
+323conameu.csv::Consumer Goods,Personal Products
+324conameu.csv::Consumer Goods,Paper & Paper Products
+325conameu.csv::Consumer Goods,Packaging & Containers
+326conameu.csv::Consumer Goods,Cleaning Products
+327conameu.csv::Consumer Goods,Office Supplies
+330conameu.csv::Consumer Goods,Auto Manufacturers - Major
+331conameu.csv::Consumer Goods,Trucks & Other Vehicles
+332conameu.csv::Consumer Goods,Recreational Vehicles
+333conameu.csv::Consumer Goods,Auto Parts
+340conameu.csv::Consumer Goods,Food - Major Diversified
+341conameu.csv::Consumer Goods,Farm Products
+342conameu.csv::Consumer Goods,Processed & Packaged Goods
+343conameu.csv::Consumer Goods,Meat Products
+344conameu.csv::Consumer Goods,Dairy Products
+345conameu.csv::Consumer Goods,Confectioners
+346conameu.csv::Consumer Goods,Beverages - Brewers
+347conameu.csv::Consumer Goods,Beverages - Wineries & Distillers
+348conameu.csv::Consumer Goods,Beverages - Soft Drinks
+350conameu.csv::Consumer Goods,Cigarettes
+351conameu.csv::Consumer Goods,Tobacco Products, Other
+410conameu.csv::Financial,Money Center Banks
+411conameu.csv::Financial,Regional - Northeast Banks
+412conameu.csv::Financial,Regional - Mid-Atlantic Banks
+413conameu.csv::Financial,Regional - Southeast Banks
+414conameu.csv::Financial,Regional - Midwest Banks
+415conameu.csv::Financial,Regional - Southwest  Banks
+416conameu.csv::Financial,Regional - Pacific Banks
+417conameu.csv::Financial,Foreign Money Center Banks
+418conameu.csv::Financial,Foreign Regional Banks
+419conameu.csv::Financial,Savings & Loans
+420conameu.csv::Financial,Investment Brokerage - National
+421conameu.csv::Financial,Investment Brokerage - Regional
+422conameu.csv::Financial,Asset Management
+423conameu.csv::Financial,Diversified Investments
+424conameu.csv::Financial,Credit Services
+425conameu.csv::Financial,Closed-End Fund - Debt
+426conameu.csv::Financial,Closed-End Fund - Equity
+427conameu.csv::Financial,Closed-End Fund - Foreign
+430conameu.csv::Financial,Life Insurance
+431conameu.csv::Financial,Accident & Health Insurance
+432conameu.csv::Financial,Property & Casualty Insurance
+433conameu.csv::Financial,Surety & Title Insurance
+434conameu.csv::Financial,Insurance Brokers
+440conameu.csv::Financial,REIT - Diversified
+441conameu.csv::Financial,REIT - Office
+442conameu.csv::Financial,REIT - Healthcare Facilities
+443conameu.csv::Financial,REIT - Hotel/Motel
+444conameu.csv::Financial,REIT - Industrial
+445conameu.csv::Financial,REIT - Residential
+446conameu.csv::Financial,REIT - Retail
+447conameu.csv::Financial,Mortgage Investment
+448conameu.csv::Financial,Property Management
+449conameu.csv::Financial,Real Estate Development
+510conameu.csv::Healthcare,Drug Manufacturers - Major
+511conameu.csv::Healthcare,Drug Manufacturers - Other
+512conameu.csv::Healthcare,Drugs - Generic
+513conameu.csv::Healthcare,Drug Delivery
+514conameu.csv::Healthcare,Drug Related Products
+515conameu.csv::Healthcare,Biotechnology
+516conameu.csv::Healthcare,Diagnostic Substances
+520conameu.csv::Healthcare,Medical Instruments & Supplies
+521conameu.csv::Healthcare,Medical Appliances & Equipment
+522conameu.csv::Healthcare,Health Care Plans
+523conameu.csv::Healthcare,Long-Term Care Facilities
+524conameu.csv::Healthcare,Hospitals
+525conameu.csv::Healthcare,Medical Laboratories & Research
+526conameu.csv::Healthcare,Home Health Care
+527conameu.csv::Healthcare,Medical Practitioners
+528conameu.csv::Healthcare,Specialized Health Services
+610conameu.csv::Industrial Goods,Aerospace/Defense - Major Diversified
+611conameu.csv::Industrial Goods,Aerospace/Defense Products & Services
+620conameu.csv::Industrial Goods,Farm & Construction Machinery
+621conameu.csv::Industrial Goods,Industrial Equipment & Components
+622conameu.csv::Industrial Goods,Diversified Machinery
+623conameu.csv::Industrial Goods,Pollution & Treatment Controls
+624conameu.csv::Industrial Goods,Machine Tools & Accessories
+625conameu.csv::Industrial Goods,Small Tools & Accessories
+626conameu.csv::Industrial Goods,Metal Fabrication
+627conameu.csv::Industrial Goods,Industrial Electrical Equipment
+628conameu.csv::Industrial Goods,Textile Industrial
+630conameu.csv::Industrial Goods,Residential Construction
+631conameu.csv::Industrial Goods,Manufactured Housing
+632conameu.csv::Industrial Goods,Lumber, Wood Production
+633conameu.csv::Industrial Goods,Cement
+634conameu.csv::Industrial Goods,General Building Materials
+635conameu.csv::Industrial Goods,Heavy Construction
+636conameu.csv::Industrial Goods,General Contractors
+637conameu.csv::Industrial Goods,Waste Management
+710conameu.csv::Services,Lodging
+711conameu.csv::Services,Resorts & Casinos
+712conameu.csv::Services,Restaurants
+713conameu.csv::Services,Specialty Eateries
+714conameu.csv::Services,Gaming Activities
+715conameu.csv::Services,Sporting Activities
+716conameu.csv::Services,General Entertainment
+720conameu.csv::Services,Advertising Agencies
+721conameu.csv::Services,Marketing Services
+722conameu.csv::Services,Entertainment - Diversified
+723conameu.csv::Services,Broadcasting - TV
+724conameu.csv::Services,Broadcasting - Radio
+725conameu.csv::Services,CATV Systems
+726conameu.csv::Services,Movie Production, Theaters
+727conameu.csv::Services,Publishing - Newspapers
+728conameu.csv::Services,Publishing - Periodicals
+729conameu.csv::Services,Publishing - Books
+730conameu.csv::Services,Apparel Stores
+731conameu.csv::Services,Department Stores
+732conameu.csv::Services,Discount, Variety Stores
+733conameu.csv::Services,Drug Stores
+734conameu.csv::Services,Grocery Stores
+735conameu.csv::Services,Electronics Stores
+736conameu.csv::Services,Home Improvement Stores
+737conameu.csv::Services,Home Furnishing Stores
+738conameu.csv::Services,Auto Parts Stores
+739conameu.csv::Services,Catalog & Mail Order Houses
+740conameu.csv::Services,Sporting Goods Stores
+741conameu.csv::Services,Toy & Hobby Stores
+742conameu.csv::Services,Jewelry Stores
+743conameu.csv::Services,Music & Video Stores
+744conameu.csv::Services,Auto Dealerships
+745conameu.csv::Services,Specialty Retail, Other
+750conameu.csv::Services,Auto Parts Wholesale
+751conameu.csv::Services,Building Materials Wholesale
+752conameu.csv::Services,Industrial Equipment Wholesale
+753conameu.csv::Services,Electronics Wholesale
+754conameu.csv::Services,Medical Equipment Wholesale
+755conameu.csv::Services,Computers Wholesale
+756conameu.csv::Services,Drugs Wholesale
+757conameu.csv::Services,Food Wholesale
+758conameu.csv::Services,Basic Materials Wholesale
+759conameu.csv::Services,Wholesale, Other
+760conameu.csv::Services,Business Services
+761conameu.csv::Services,Rental & Leasing Services
+762conameu.csv::Services,Personal Services
+763conameu.csv::Services,Consumer Services
+764conameu.csv::Services,Staffing & Outsourcing Services
+765conameu.csv::Services,Security & Protection Services
+766conameu.csv::Services,Education & Training Services
+767conameu.csv::Services,Technical Services
+768conameu.csv::Services,Research Services
+769conameu.csv::Services,Management Services
+770conameu.csv::Services,Major Airlines
+771conameu.csv::Services,Regional Airlines
+772conameu.csv::Services,Air Services, Other
+773conameu.csv::Services,Air Delivery & Freight Services
+774conameu.csv::Services,Trucking
+775conameu.csv::Services,Shipping
+776conameu.csv::Services,Railroads
+810conameu.csv::Technology,Diversified Computer Systems
+811conameu.csv::Technology,Personal Computers
+812conameu.csv::Technology,Computer Based Systems
+813conameu.csv::Technology,Data Storage Devices
+814conameu.csv::Technology,Networking & Communication Devices
+815conameu.csv::Technology,Computer Peripherals
+820conameu.csv::Technology,Multimedia & Graphics Software
+821conameu.csv::Technology,Application Software
+822conameu.csv::Technology,Technical & System Software
+823conameu.csv::Technology,Security Software & Services
+824conameu.csv::Technology,Information Technology Services
+825conameu.csv::Technology,Healthcare Information Services
+826conameu.csv::Technology,Business Software & Services
+827conameu.csv::Technology,Information & Delivery Services
+830conameu.csv::Technology,Semiconductor - Broad Line
+831conameu.csv::Technology,Semiconductor- Memory Chips
+832conameu.csv::Technology,Semiconductor - Specialized
+833conameu.csv::Technology,Semiconductor - Integrated Circuits
+834conameu.csv::Technology,Semiconductor Equipment & Materials
+835conameu.csv::Technology,Printed Circuit Boards
+836conameu.csv::Technology,Diversified Electronics
+837conameu.csv::Technology,Scientific & Technical Instruments
+840conameu.csv::Technology,Wireless Communications
+841conameu.csv::Technology,Communication Equipment
+842conameu.csv::Technology,Processing Systems & Products
+843conameu.csv::Technology,Long Distance Carriers
+844conameu.csv::Technology,Telecom Services - Domestic
+845conameu.csv::Technology,Telecom Services - Foreign
+846conameu.csv::Technology,Diversified Communication Services
+850conameu.csv::Technology,Internet Service Providers
+851conameu.csv::Technology,Internet Information Providers
+852conameu.csv::Technology,Internet Software & Services
+910conameu.csv::Utilities,Foreign Utilities
+911conameu.csv::Utilities,Electric Utilities
+912conameu.csv::Utilities,Gas Utilities
+913conameu.csv::Utilities,Diversified Utilities
+914conameu.csv::Utilities,Water Utilities
