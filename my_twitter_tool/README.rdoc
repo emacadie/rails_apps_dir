@@ -1,0 +1,12 @@
+== Another Twitter Tool  
+
+There are a million Twitter gems/apps/plugins, etc.   
+
+I have used a couple of Twitter plugins for WordPress that each week get your Tweets and post them on your blog.  
+
+I liked it because I could use my blog to bookmark something. I could tweet the link with a note, and then later search for it on my blog.  
+
+But they do not seem to be updated. The developers lose interest. One was really good, but the developer added a dependency, and it stopped working.   
+So I decided to make my own. All this will do is run manually and spit out some HTML. I will then just copy and paste it to my blog.  
+
+

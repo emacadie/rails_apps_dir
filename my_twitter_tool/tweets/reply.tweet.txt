@@ -1,0 +1,28 @@
+Here is t:
+#<Twitter::Tweet:0x000000028daa70>
+t: @EMacAdie Repying to a tweet
+t.attrs.size: 20
+t_hash.class: Hash
+t_hash.keys: [:created_at, :id, :id_str, :text, :source, :truncated, :in_reply_to_status_id, :in_reply_to_status_id_str, :in_reply_to_user_id, :in_reply_to_user_id_str, :in_reply_to_screen_name, :user, :geo, :coordinates, :place, :contributors, :retweet_count, :entities, :favorited, :retweeted]
+{  :created_at=> "Sun Jan 13 04:17:24 +0000 2013"Index: 0
+:id=> 290311559123726337Index: 1
+ :id_str=> "290311559123726337"Index: 2
+ :text=> "@EMacAdie Repying to a tweet"Index: 3
+ :source=> "web"Index: 4
+:truncated=> falseIndex: 5
+:in_reply_to_status_id=> 289118157384318977Index: 6
+ :in_reply_to_status_id_str=> "289118157384318977"Index: 7
+:in_reply_to_user_id=> 111373627Index: 8
+ :in_reply_to_user_id_str=> "111373627"Index: 9
+ :in_reply_to_screen_name=> "EMacAdie"Index: 10
+:user=> {:id=>169624004, :id_str=>"169624004", :name=>"Eric MacAdie", :screen_name=>"EMacAdie2", :location=>"", :description=>"", :url=>nil, :entities=>{:description=>{:urls=>[]}}, :protected=>false, :followers_count=>2, :friends_count=>2, :listed_count=>0, :created_at=>"Thu Jul 22 19:51:06 +0000 2010", :favourites_count=>0, :utc_offset=>nil, :time_zone=>nil, :geo_enabled=>false, :verified=>false, :statuses_count=>23, :lang=>"en", :contributors_enabled=>false, :is_translator=>false, :profile_background_color=>"C0DEED", :profile_background_image_url=>"http://a0.twimg.com/images/themes/theme1/bg.png", :profile_background_image_url_https=>"https://si0.twimg.com/images/themes/theme1/bg.png", :profile_background_tile=>false, :profile_image_url=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_4_normal.png", :profile_image_url_https=>"https://si0.twimg.com/sticky/default_profile_images/default_profile_4_normal.png", :profile_link_color=>"0084B4", :profile_sidebar_border_color=>"C0DEED", :profile_sidebar_fill_color=>"DDEEF6", :profile_text_color=>"333333", :profile_use_background_image=>true, :default_profile=>true, :default_profile_image=>true, :following=>nil, :follow_request_sent=>false, :notifications=>nil}Index: 11
+Index: 12
+Index: 13
+Index: 14
+Index: 15
+:retweet_count=> 0Index: 16
+:entities=> {:hashtags=>[], :urls=>[], :user_mentions=>[{:screen_name=>"EMacAdie", :name=>"Eric MacAdie", :id=>111373627, :id_str=>"111373627", :indices=>[0, 9]}]}Index: 17
+:favorited=> falseIndex: 18
+:retweeted=> falseIndex: 19
+ }
+----------------------------------------------
