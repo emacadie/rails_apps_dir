@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @landlord.first_name %>
+</p>
+
+<p>
+  <b>Second name:</b>
+  <%= @landlord.second_name %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @landlord.note %>
+</p>
+
+
+<ul>
+<% @apartments.each do |apartment| %>
+<li> <%= apartment.address_1 %> <%= apartment.address_2 %> <%= apartment.city %> <%= link_to 'Show this aparment', apartment_path(apartment.id) %><br />
+</li>
+<% end %>
+</ul>
+
+<%= link_to 'Edit', edit_landlord_path(@landlord) %> |
+<%= link_to 'Back', landlords_path %>

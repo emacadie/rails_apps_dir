@@ -1,0 +1,26 @@
+<%= form_for(@term) do |f| %>
+  <% if @term.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@term.errors.count, "error") %> prohibited this term from being saved:</h2>
+
+      <ul>
+      <% @term.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :season %><br />
+    <%= f.select :season, { "Winter" => "Winter", "Spring" => "Spring", "Summer" => "Summer", "Fall" => "Fall"} %>
+    
+  </div>
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.select :year, {"2012" => 2012, "2013" => "2013" } %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
