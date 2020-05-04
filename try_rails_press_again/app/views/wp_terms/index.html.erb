@@ -1,0 +1,29 @@
+<h1>Listing wp_terms</h1>
+
+<table>
+  <tr>
+    <th>Term</th>
+    <th>Name</th>
+    <th>Slug</th>
+    <th>Term group</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wp_terms.each do |wp_term| %>
+  <tr>
+    <td><%= wp_term.term_id %></td>
+    <td><%= wp_term.name %></td>
+    <td><%= wp_term.slug %></td>
+    <td><%= wp_term.term_group %></td>
+    <td><%= link_to 'Show', wp_term %></td>
+    <td><%= link_to 'Edit', edit_wp_term_path(wp_term) %></td>
+    <td><%= link_to 'Destroy', wp_term, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wp term', new_wp_term_path %>

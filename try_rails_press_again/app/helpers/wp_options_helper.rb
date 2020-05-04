@@ -1,0 +1,2 @@
+module WpOptionsHelper
+end

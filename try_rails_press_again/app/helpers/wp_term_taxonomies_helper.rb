@@ -1,0 +1,2 @@
+module WpTermTaxonomiesHelper
+end

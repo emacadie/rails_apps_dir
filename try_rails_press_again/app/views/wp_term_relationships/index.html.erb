@@ -1,0 +1,27 @@
+<h1>Listing wp_term_relationships</h1>
+
+<table>
+  <tr>
+    <th>Object</th>
+    <th>Term taxonomy</th>
+    <th>Term order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wp_term_relationships.each do |wp_term_relationship| %>
+  <tr>
+    <td><%= wp_term_relationship.object_id %></td>
+    <td><%= wp_term_relationship.term_taxonomy_id %></td>
+    <td><%= wp_term_relationship.term_order %></td>
+    <td><%= link_to 'Show', wp_term_relationship %></td>
+    <td><%= link_to 'Edit', edit_wp_term_relationship_path(wp_term_relationship) %></td>
+    <td><%= link_to 'Destroy', wp_term_relationship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wp term relationship', new_wp_term_relationship_path %>

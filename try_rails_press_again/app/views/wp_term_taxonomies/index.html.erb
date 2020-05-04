@@ -1,0 +1,33 @@
+<h1>Listing wp_term_taxonomies</h1>
+
+<table>
+  <tr>
+    <th>Term taxonomy</th>
+    <th>Term</th>
+    <th>Taxonomy</th>
+    <th>Description</th>
+    <th>Parent</th>
+    <th>Count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wp_term_taxonomies.each do |wp_term_taxonomy| %>
+  <tr>
+    <td><%= wp_term_taxonomy.term_taxonomy_id %></td>
+    <td><%= wp_term_taxonomy.term_id %></td>
+    <td><%= wp_term_taxonomy.taxonomy %></td>
+    <td><%= wp_term_taxonomy.description %></td>
+    <td><%= wp_term_taxonomy.parent %></td>
+    <td><%= wp_term_taxonomy.count %></td>
+    <td><%= link_to 'Show', wp_term_taxonomy %></td>
+    <td><%= link_to 'Edit', edit_wp_term_taxonomy_path(wp_term_taxonomy) %></td>
+    <td><%= link_to 'Destroy', wp_term_taxonomy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wp term taxonomy', new_wp_term_taxonomy_path %>

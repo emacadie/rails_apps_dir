@@ -1,0 +1,29 @@
+<h1>Listing wp_postmeta</h1>
+
+<table>
+  <tr>
+    <th>Meta</th>
+    <th>Post</th>
+    <th>Meta key</th>
+    <th>Meta value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wp_postmeta.each do |wp_postmetum| %>
+  <tr>
+    <td><%= wp_postmetum.meta_id %></td>
+    <td><%= wp_postmetum.post_id %></td>
+    <td><%= wp_postmetum.meta_key %></td>
+    <td><%= wp_postmetum.meta_value %></td>
+    <td><%= link_to 'Show', wp_postmetum %></td>
+    <td><%= link_to 'Edit', edit_wp_postmetum_path(wp_postmetum) %></td>
+    <td><%= link_to 'Destroy', wp_postmetum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wp postmetum', new_wp_postmetum_path %>

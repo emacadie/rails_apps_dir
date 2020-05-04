@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Term:</b>
+  <%= @wp_term.term_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @wp_term.name %>
+</p>
+
+<p>
+  <b>Slug:</b>
+  <%= @wp_term.slug %>
+</p>
+
+<p>
+  <b>Term group:</b>
+  <%= @wp_term.term_group %>
+</p>
+
+
+<%= link_to 'Edit', edit_wp_term_path(@wp_term) %> |
+<%= link_to 'Back', wp_terms_path %>

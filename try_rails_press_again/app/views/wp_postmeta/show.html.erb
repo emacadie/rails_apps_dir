@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Meta:</b>
+  <%= @wp_postmetum.meta_id %>
+</p>
+
+<p>
+  <b>Post:</b>
+  <%= @wp_postmetum.post_id %>
+</p>
+
+<p>
+  <b>Meta key:</b>
+  <%= @wp_postmetum.meta_key %>
+</p>
+
+<p>
+  <b>Meta value:</b>
+  <%= @wp_postmetum.meta_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_wp_postmetum_path(@wp_postmetum) %> |
+<%= link_to 'Back', wp_postmeta_path %>

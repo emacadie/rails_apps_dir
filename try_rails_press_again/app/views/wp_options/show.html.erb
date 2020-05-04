@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Option:</b>
+  <%= @wp_option.option_id %>
+</p>
+
+<p>
+  <b>Option name:</b>
+  <%= @wp_option.option_name %>
+</p>
+
+<p>
+  <b>Option value:</b>
+  <%= @wp_option.option_value %>
+</p>
+
+<p>
+  <b>Autoload:</b>
+  <%= @wp_option.autoload %>
+</p>
+
+
+<%= link_to 'Edit', edit_wp_option_path(@wp_option) %> |
+<%= link_to 'Back', wp_options_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Meta:</b>
+  <%= @wp_commentmetum.meta_id %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @wp_commentmetum.comment_id %>
+</p>
+
+<p>
+  <b>Meta key:</b>
+  <%= @wp_commentmetum.meta_key %>
+</p>
+
+<p>
+  <b>Meta value:</b>
+  <%= @wp_commentmetum.meta_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_wp_commentmetum_path(@wp_commentmetum) %> |
+<%= link_to 'Back', wp_commentmeta_path %>

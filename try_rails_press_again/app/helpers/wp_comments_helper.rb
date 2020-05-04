@@ -1,0 +1,2 @@
+module WpCommentsHelper
+end

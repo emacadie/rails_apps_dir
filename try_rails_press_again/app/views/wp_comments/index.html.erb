@@ -1,0 +1,51 @@
+<h1>Listing wp_comments</h1>
+
+<table>
+  <tr>
+    <th>Comment id</th>
+    <th>Comment post id</th>
+    <th>Comment author</th>
+    <th>Comment author email</th>
+    <th>Comment author url</th>
+    <th>Comment author ip</th>
+    <th>Comment date</th>
+    <th>Comment date gmt</th>
+    <th>Comment content</th>
+    <th>Comment karma</th>
+    <th>Comment approved</th>
+    <th>Comment agent</th>
+    <th>Comment type</th>
+    <th>Comment parent</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wp_comments.each do |wp_comment| %>
+  <tr>
+    <td><%= wp_comment.comment_ID %></td>
+    <td><%= wp_comment.comment_post_ID %></td>
+    <td><%= wp_comment.comment_author %></td>
+    <td><%= wp_comment.comment_author_email %></td>
+    <td><%= wp_comment.comment_author_url %></td>
+    <td><%= wp_comment.comment_author_IP %></td>
+    <td><%= wp_comment.comment_date %></td>
+    <td><%= wp_comment.comment_date_gmt %></td>
+    <td><%= wp_comment.comment_content %></td>
+    <td><%= wp_comment.comment_karma %></td>
+    <td><%= wp_comment.comment_approved %></td>
+    <td><%= wp_comment.comment_agent %></td>
+    <td><%= wp_comment.comment_type %></td>
+    <td><%= wp_comment.comment_parent %></td>
+    <td><%= wp_comment.user_id %></td>
+    <td><%= link_to 'Show', wp_comment %></td>
+    <td><%= link_to 'Edit', edit_wp_comment_path(wp_comment) %></td>
+    <td><%= link_to 'Destroy', wp_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wp comment', new_wp_comment_path %>

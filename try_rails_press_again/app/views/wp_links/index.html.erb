@@ -1,0 +1,47 @@
+<h1>Listing wp_links</h1>
+
+<table>
+  <tr>
+    <th>Link</th>
+    <th>Link url</th>
+    <th>Link name</th>
+    <th>Link image</th>
+    <th>Link target</th>
+    <th>Link description</th>
+    <th>Link visible</th>
+    <th>Link owner</th>
+    <th>Link rating</th>
+    <th>Link updated</th>
+    <th>Link rel</th>
+    <th>Link notes</th>
+    <th>Link rss</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wp_links.each do |wp_link| %>
+  <tr>
+    <td><%= wp_link.link_id %></td>
+    <td><%= wp_link.link_url %></td>
+    <td><%= wp_link.link_name %></td>
+    <td><%= wp_link.link_image %></td>
+    <td><%= wp_link.link_target %></td>
+    <td><%= wp_link.link_description %></td>
+    <td><%= wp_link.link_visible %></td>
+    <td><%= wp_link.link_owner %></td>
+    <td><%= wp_link.link_rating %></td>
+    <td><%= wp_link.link_updated %></td>
+    <td><%= wp_link.link_rel %></td>
+    <td><%= wp_link.link_notes %></td>
+    <td><%= wp_link.link_rss %></td>
+    <td><%= link_to 'Show', wp_link %></td>
+    <td><%= link_to 'Edit', edit_wp_link_path(wp_link) %></td>
+    <td><%= link_to 'Destroy', wp_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wp link', new_wp_link_path %>

@@ -1,0 +1,1166 @@
+wp-admin/upload.php:44:			$lost = $wpdb->get_col( "
+wp-admin/upload.php:76:				$attached = $wpdb->query( $wpdb->prepare( "UPDATE $wpdb->posts SET post_parent = %d WHERE post_type = 'attachment' AND ID IN ( $attach_string )", $parent_id ) );
+wp-admin/update-core.php:25:	global $wp_local_package, $wpdb;
+wp-admin/update-core.php:36:	$mysql_version  = $wpdb->db_version();
+wp-admin/update-core.php:48:			if ( file_exists( WP_CONTENT_DIR . '/db.php' ) && empty( $wpdb->is_mysql ) )
+wp-admin/edit-comments.php:23:		$comment_status = $wpdb->escape( $_REQUEST['comment_status'] );
+wp-admin/edit-comments.php:24:		$delete_time = $wpdb->escape( $_REQUEST['pagegen_timestamp'] );
+wp-admin/maint/repair.php:35:	$tables = $wpdb->tables();
+wp-admin/maint/repair.php:38:	if ( is_multisite() && ! $wpdb->get_var( "SHOW TABLES LIKE '$wpdb->sitecategories'" ) )
+wp-admin/maint/repair.php:45:		$check = $wpdb->get_row( "CHECK TABLE $table" );
+wp-admin/maint/repair.php:55:			$repair = $wpdb->get_row( "REPAIR TABLE $table" );
+wp-admin/maint/repair.php:70:			$check = $wpdb->get_row( "ANALYZE TABLE $table" );
+wp-admin/maint/repair.php:77:				$check = $wpdb->get_row( "OPTIMIZE TABLE $table" );
+wp-admin/includes/dashboard.php:613:	global $wpdb;
+wp-admin/includes/media.php:36:	global $wpdb;
+wp-admin/includes/media.php:1931:	global $wpdb, $wp_query, $wp_locale, $type, $tab, $post_mime_types;
+wp-admin/includes/media.php:2027:$arc_result = $wpdb->get_results( $arc_query );
+wp-admin/includes/class-wp-list-table.php:361:		global $wpdb, $wp_locale;
+wp-admin/includes/class-wp-list-table.php:363:		$months = $wpdb->get_results( $wpdb->prepare( "
+wp-admin/includes/class-wp-list-table.php:365:			FROM $wpdb->posts
+wp-admin/includes/nav-menu.php:1152:	global $wpdb;
+wp-admin/includes/update-core.php:614:	global $wp_filesystem, $_old_files, $_new_bundled_files, $wpdb;
+wp-admin/includes/update-core.php:646:	$mysql_version  = $wpdb->db_version();
+wp-admin/includes/update-core.php:650:	if ( file_exists( WP_CONTENT_DIR . '/db.php' ) && empty( $wpdb->is_mysql ) )
+wp-admin/includes/ms.php:55:	global $wpdb, $current_site;
+wp-admin/includes/ms.php:83:		$drop_tables = apply_filters( 'wpmu_drop_tables', $wpdb->tables( 'blog' ) );
+wp-admin/includes/ms.php:86:			$wpdb->query( "DROP TABLE IF EXISTS `$table`" );
+wp-admin/includes/ms.php:89:		$wpdb->delete( $wpdb->blogs, array( 'blog_id' => $blog_id ) );
+wp-admin/includes/ms.php:133:	global $wpdb;
+wp-admin/includes/ms.php:168:	$wpdb->delete( $wpdb->users, array( 'ID' => $id ) );
+wp-admin/includes/ms.php:217:	global $errors, $wpdb;
+wp-admin/includes/ms.php:366:	global $wpdb;
+wp-admin/includes/ms.php:371:	$wpdb->update( $wpdb->users, array( $pref => $value ), array( 'ID' => $id ) );
+wp-admin/includes/ms.php:670:	global $wpdb;
+wp-admin/includes/ms.php:672:	if ($site_id == $wpdb->siteid )
+wp-admin/includes/template.php:512:	global $wpdb;
+wp-admin/includes/template.php:514:	$keys = $wpdb->get_col( "
+wp-admin/includes/template.php:516:		FROM $wpdb->postmeta
+wp-admin/includes/template.php:676:	global $wpdb;
+wp-admin/includes/comment.php:13: * @uses $wpdb
+wp-admin/includes/comment.php:20:	global $wpdb;
+wp-admin/includes/comment.php:100: * @uses $wpdb
+wp-admin/includes/comment.php:106:	global $wpdb;
+wp-admin/includes/schema.php:12:global $wpdb, $wp_queries, $charset_collate;
+wp-admin/includes/schema.php:20:$charset_collate = $wpdb->get_charset_collate();
+wp-admin/includes/schema.php:32:	global $wpdb;
+wp-admin/includes/schema.php:36:	if ( ! empty($wpdb->charset) )
+wp-admin/includes/schema.php:37:		$charset_collate = "DEFAULT CHARACTER SET $wpdb->charset";
+wp-admin/includes/schema.php:38:	if ( ! empty($wpdb->collate) )
+wp-admin/includes/schema.php:39:		$charset_collate .= " COLLATE $wpdb->collate";
+wp-admin/includes/schema.php:41:	if ( $blog_id && $blog_id != $wpdb->blogid )
+wp-admin/includes/schema.php:42:		$old_blog_id = $wpdb->set_blog_id( $blog_id );
+wp-admin/includes/schema.php:48:	$blog_tables = "CREATE TABLE $wpdb->terms (
+wp-admin/includes/schema.php:57:CREATE TABLE $wpdb->term_taxonomy (
+wp-admin/includes/schema.php:68:CREATE TABLE $wpdb->term_relationships (
+wp-admin/includes/schema.php:75:CREATE TABLE $wpdb->commentmeta (
+wp-admin/includes/schema.php:84:CREATE TABLE $wpdb->comments (
+wp-admin/includes/schema.php:106:CREATE TABLE $wpdb->links (
+wp-admin/includes/schema.php:123:CREATE TABLE $wpdb->options (
+wp-admin/includes/schema.php:131:CREATE TABLE $wpdb->postmeta (
+wp-admin/includes/schema.php:140:CREATE TABLE $wpdb->posts (
+wp-admin/includes/schema.php:172:	$users_single_table = "CREATE TABLE $wpdb->users (
+wp-admin/includes/schema.php:189:	$users_multi_table = "CREATE TABLE $wpdb->users (
+wp-admin/includes/schema.php:208:	$usermeta_table = "CREATE TABLE $wpdb->usermeta (
+wp-admin/includes/schema.php:225:	$ms_global_tables = "CREATE TABLE $wpdb->blogs (
+wp-admin/includes/schema.php:242:CREATE TABLE $wpdb->blog_versions (
+wp-admin/includes/schema.php:249:CREATE TABLE $wpdb->registration_log (
+wp-admin/includes/schema.php:258:CREATE TABLE $wpdb->site (
+wp-admin/includes/schema.php:265:CREATE TABLE $wpdb->sitemeta (
+wp-admin/includes/schema.php:274:CREATE TABLE $wpdb->signups (
+wp-admin/includes/schema.php:310:		$wpdb->set_blog_id( $old_blog_id );
+wp-admin/includes/schema.php:322: * @uses $wpdb
+wp-admin/includes/schema.php:326:	global $wpdb, $wp_db_version, $current_site, $wp_current_db_version;
+wp-admin/includes/schema.php:508:		$option = $wpdb->escape($option);
+wp-admin/includes/schema.php:511:		$value = $wpdb->escape($value);
+wp-admin/includes/schema.php:518:		$wpdb->query("INSERT INTO $wpdb->options (option_name, option_value, autoload) VALUES " . $insert);
+wp-admin/includes/schema.php:545:	$wpdb->query("DELETE FROM $wpdb->options WHERE option_name REGEXP '^rss_[0-9a-f]{32}(_ts)?$'");
+wp-admin/includes/schema.php:832:	global $wpdb, $current_site, $wp_db_version, $wp_rewrite;
+wp-admin/includes/schema.php:861:		$wpdb->insert( $wpdb->site, array( 'domain' => $domain, 'path' => $path ) );
+wp-admin/includes/schema.php:862:		$network_id = $wpdb->insert_id;
+wp-admin/includes/schema.php:864:		$wpdb->insert( $wpdb->site, array( 'domain' => $domain, 'path' => $path, 'id' => $network_id ) );
+wp-admin/includes/schema.php:924:		$meta_key = $wpdb->escape( $meta_key );
+wp-admin/includes/schema.php:927:		$meta_value = $wpdb->escape( $meta_value );
+wp-admin/includes/schema.php:932:	$wpdb->query( "INSERT INTO $wpdb->sitemeta ( site_id, meta_key, meta_value ) VALUES " . $insert );
+wp-admin/includes/schema.php:942:		$wpdb->insert( $wpdb->blogs, array( 'site_id' => $network_id, 'domain' => $domain, 'path' => $path, 'registered' => current_time( 'mysql' ) ) );
+wp-admin/includes/schema.php:943:		$current_site->blog_id = $blog_id = $wpdb->insert_id;
+wp-admin/includes/user.php:31:	global $wp_roles, $wpdb;
+wp-admin/includes/user.php:37:		$user->user_login = $wpdb->escape( $userdata->user_login );
+wp-admin/includes/user.php:217:	global $wpdb;
+wp-admin/includes/user.php:220:	return $wpdb->get_results( $query );
+wp-admin/includes/user.php:238:	global $wpdb;
+wp-admin/includes/user.php:274:		$wpdb->update( $wpdb->posts, array('post_author' => $reassign), array('post_author' => $id) );
+wp-admin/includes/user.php:280:		$wpdb->update( $wpdb->links, array('link_owner' => $reassign), array('link_owner' => $id) );
+wp-admin/includes/user.php:295:		$wpdb->delete( $wpdb->users, array( 'ID' => $id ) );
+wp-admin/includes/meta-boxes.php:536:	global $wpdb;
+wp-admin/includes/class-wp-media-list-table.php:26:		global $lost, $wpdb, $wp_query, $post_mime_types, $avail_post_mime_types;
+wp-admin/includes/class-wp-media-list-table.php:45:		global $wpdb, $post_mime_types, $avail_post_mime_types;
+wp-admin/includes/post.php:275:	global $wpdb;
+wp-admin/includes/post.php:421:	global $wpdb;
+wp-admin/includes/post.php:480:	global $wpdb;
+wp-admin/includes/post.php:505:		return (int) $wpdb->get_var( $wpdb->prepare($query, $args) );
+wp-admin/includes/post.php:612:	global $wpdb;
+wp-admin/includes/post.php:662:	global $wpdb;
+wp-admin/includes/post.php:664:	$keys = $wpdb->get_col( "
+wp-admin/includes/post.php:666:			FROM $wpdb->postmeta
+wp-admin/includes/post.php:696:	global $wpdb;
+wp-admin/includes/post.php:699:			FROM $wpdb->postmeta WHERE post_id = %d
+wp-admin/includes/post.php:788:	global $wpdb;
+wp-admin/includes/post.php:792:	$children = $wpdb->get_col( $wpdb->prepare("
+wp-admin/includes/post.php:794:		FROM $wpdb->postmeta
+wp-admin/includes/post.php:799:		$wpdb->update($wpdb->posts, array('post_parent' => $new_ID), array('ID' => $child_id) );
+wp-admin/includes/post.php:890:	global $wpdb;
+wp-admin/includes/post.php:942:	global $wpdb;
+wp-admin/includes/post.php:943:	return $where .= " AND {$wpdb->posts}.post_parent < 1";
+wp-admin/includes/post.php:1047:	global $wpdb;
+wp-admin/includes/export.php:26:	global $wpdb, $post;
+wp-admin/includes/export.php:48:		$where = $wpdb->prepare( "{$wpdb->posts}.post_type = %s", $args['content'] );
+wp-admin/includes/export.php:52:		$where = $wpdb->prepare( "{$wpdb->posts}.post_type IN (" . implode( ',', $esses ) . ')', $post_types );
+wp-admin/includes/export.php:56:		$where .= $wpdb->prepare( " AND {$wpdb->posts}.post_status = %s", $args['status'] );
+wp-admin/includes/export.php:58:		$where .= " AND {$wpdb->posts}.post_status != 'auto-draft'";
+wp-admin/includes/export.php:63:			$join = "INNER JOIN {$wpdb->term_relationships} ON ({$wpdb->posts}.ID = {$wpdb->term_relationships}.object_id)";
+wp-admin/includes/export.php:64:			$where .= $wpdb->prepare( " AND {$wpdb->term_relationships}.term_taxonomy_id = %d", $term['term_taxonomy_id'] );
+wp-admin/includes/export.php:70:			$where .= $wpdb->prepare( " AND {$wpdb->posts}.post_author = %d", $args['author'] );
+wp-admin/includes/export.php:73:			$where .= $wpdb->prepare( " AND {$wpdb->posts}.post_date >= %s", date( 'Y-m-d', strtotime($args['start_date']) ) );
+wp-admin/includes/export.php:76:			$where .= $wpdb->prepare( " AND {$wpdb->posts}.post_date < %s", date( 'Y-m-d', strtotime('+1 month', strtotime($args['end_date'])) ) );
+wp-admin/includes/export.php:238:		global $wpdb;
+wp-admin/includes/ajax-actions.php:49:	global $wpdb;
+wp-admin/includes/ajax-actions.php:711:	global $wp_list_table, $wpdb;
+wp-admin/includes/ajax-actions.php:731:		$comment_author       = $wpdb->escape($user->display_name);
+wp-admin/includes/ajax-actions.php:732:		$comment_author_email = $wpdb->escape($user->user_email);
+wp-admin/includes/ajax-actions.php:733:		$comment_author_url   = $wpdb->escape($user->user_url);
+wp-admin/includes/ajax-actions.php:1420:	global $wpdb;
+wp-admin/includes/class-wp-posts-list-table.php:49:		global $post_type_object, $wpdb;
+wp-admin/includes/class-wp-posts-list-table.php:60:			$this->user_posts_count = $wpdb->get_var( $wpdb->prepare( "
+wp-admin/includes/class-wp-posts-list-table.php:336:		global $wpdb;
+wp-admin/includes/class-wp-posts-list-table.php:364:					$wpdb->update( $wpdb->posts, array( 'post_parent' => 0 ), array( 'ID' => $page->ID ) );
+wp-admin/includes/class-wp-ms-users-list-table.php:17:		global $usersearch, $role, $wpdb, $mode;
+wp-admin/includes/deprecated.php:226:	global $wpdb;
+wp-admin/includes/deprecated.php:228:		$level_key = $wpdb->get_blog_prefix() . 'user_level';
+wp-admin/includes/deprecated.php:230:		$level_key = $wpdb->get_blog_prefix() . 'capabilities'; // wpmu site admins don't have user_levels
+wp-admin/includes/deprecated.php:244:	global $wpdb;
+wp-admin/includes/deprecated.php:268:	global $wpdb;
+wp-admin/includes/deprecated.php:282:		$level_key = $wpdb->get_blog_prefix() . 'user_level';
+wp-admin/includes/deprecated.php:284:		$level_key = $wpdb->get_blog_prefix() . 'capabilities'; // wpmu site admins don't have user_levels
+wp-admin/includes/deprecated.php:290:	return $wpdb->get_col( $query );
+wp-admin/includes/deprecated.php:299:	global $wpdb;
+wp-admin/includes/deprecated.php:302:		$level_key = $wpdb->get_blog_prefix() . 'user_level';
+wp-admin/includes/deprecated.php:304:		$level_key = $wpdb->get_blog_prefix() . 'capabilities'; // wpmu site admins don't have user_levels
+wp-admin/includes/deprecated.php:495:		global $wpdb;
+wp-admin/includes/deprecated.php:498:		$this->query_limit = $wpdb->prepare(" LIMIT %d, %d", $this->first_user, $this->users_per_page);
+wp-admin/includes/deprecated.php:506:				$searches[] = $wpdb->prepare( $col . ' LIKE %s', '%' . like_escape($this->search_term) . '%' );
+wp-admin/includes/deprecated.php:511:		$this->query_from = " FROM $wpdb->users";
+wp-admin/includes/deprecated.php:515:			$this->query_from .= " INNER JOIN $wpdb->usermeta ON $wpdb->users.ID = $wpdb->usermeta.user_id";
+wp-admin/includes/deprecated.php:516:			$this->query_where .= $wpdb->prepare(" AND $wpdb->usermeta.meta_key = '{$wpdb->prefix}capabilities' AND $wpdb->usermeta.meta_value LIKE %s", '%' . $this->role . '%');
+wp-admin/includes/deprecated.php:518:			$level_key = $wpdb->prefix . 'capabilities'; // wpmu site admins don't have user_levels
+wp-admin/includes/deprecated.php:519:			$this->query_from .= ", $wpdb->usermeta";
+wp-admin/includes/deprecated.php:520:			$this->query_where .= " AND $wpdb->users.ID = $wpdb->usermeta.user_id AND meta_key = '{$level_key}'";
+wp-admin/includes/deprecated.php:535:		global $wpdb;
+wp-admin/includes/deprecated.php:661:	global $wpdb;
+wp-admin/includes/upgrade.php:104:	global $wpdb, $wp_rewrite, $current_site, $table_prefix;
+wp-admin/includes/upgrade.php:114:			$wpdb->insert( $wpdb->sitecategories, array('cat_ID' => 0, 'cat_name' => $cat_name, 'category_nicename' => $cat_slug, 'last_updated' => current_time('mysql', true)) );
+wp-admin/includes/upgrade.php:115:			$cat_id = $wpdb->insert_id;
+wp-admin/includes/upgrade.php:122:	$wpdb->insert( $wpdb->terms, array('term_id' => $cat_id, 'name' => $cat_name, 'slug' => $cat_slug, 'term_group' => 0) );
+wp-admin/includes/upgrade.php:123:	$wpdb->insert( $wpdb->term_taxonomy, array('term_id' => $cat_id, 'taxonomy' => 'category', 'description' => '', 'parent' => 0, 'count' => 1));
+wp-admin/includes/upgrade.php:124:	$cat_tt_id = $wpdb->insert_id;
+wp-admin/includes/upgrade.php:143:	$wpdb->insert( $wpdb->posts, array(
+wp-admin/includes/upgrade.php:160:	$wpdb->insert( $wpdb->term_relationships, array('term_taxonomy_id' => $cat_tt_id, 'object_id' => 1) );
+wp-admin/includes/upgrade.php:172:	$wpdb->insert( $wpdb->comments, array(
+wp-admin/includes/upgrade.php:195:	$wpdb->insert( $wpdb->posts, array(
+wp-admin/includes/upgrade.php:212:	$wpdb->insert( $wpdb->postmeta, array( 'post_id' => 2, 'meta_key' => '_wp_page_template', 'meta_value' => 'default' ) );
+wp-admin/includes/upgrade.php:234:		$wpdb->update( $wpdb->options, array('option_value' => $user->user_email), array('option_name' => 'admin_email') );
+wp-admin/includes/upgrade.php:237:		$wpdb->query( $wpdb->prepare("DELETE FROM $wpdb->usermeta WHERE user_id != %d AND meta_key = %s", $user_id, $table_prefix.'user_level') );
+wp-admin/includes/upgrade.php:238:		$wpdb->query( $wpdb->prepare("DELETE FROM $wpdb->usermeta WHERE user_id != %d AND meta_key = %s", $user_id, $table_prefix.'capabilities') );
+wp-admin/includes/upgrade.php:242:			$wpdb->delete( $wpdb->usermeta, array( 'user_id' => $user_id , 'meta_key' => $wpdb->base_prefix.'1_capabilities' ) );
+wp-admin/includes/upgrade.php:294:	global $wp_current_db_version, $wp_db_version, $wpdb;
+wp-admin/includes/upgrade.php:316:			$wpdb->query( "UPDATE {$wpdb->blog_versions} SET db_version = '{$wp_db_version}' WHERE blog_id = '{$wpdb->blogid}'" );
+wp-admin/includes/upgrade.php:318:			$wpdb->query( "INSERT INTO {$wpdb->blog_versions} ( `blog_id` , `db_version` , `last_updated` ) VALUES ( '{$wpdb->blogid}', '{$wp_db_version}', NOW());" );
+wp-admin/includes/upgrade.php:419:	global $wpdb;
+wp-admin/includes/upgrade.php:427:				$wpdb->query( $wpdb->prepare("UPDATE $wpdb->posts SET post_name = %s WHERE ID = %d", $newtitle, $post->ID) );
+wp-admin/includes/upgrade.php:436:			$wpdb>update( $wpdb->categories, array('category_nicename' => $newtitle), array('cat_ID' => $category->cat_ID) );
+wp-admin/includes/upgrade.php:440:	$wpdb->query("UPDATE $wpdb->options SET option_value = REPLACE(option_value, 'wp-links/links-images/', 'wp-images/links/')
+wp-admin/includes/upgrade.php:460:				$wpdb->insert( $wpdb->post2cat, array('post_id' => $post->ID, 'category_id' => $post->post_category) );
+wp-admin/includes/upgrade.php:472:	global $wpdb;
+wp-admin/includes/upgrade.php:475:	add_clean_index($wpdb->posts, 'post_name');
+wp-admin/includes/upgrade.php:476:	add_clean_index($wpdb->posts, 'post_status');
+wp-admin/includes/upgrade.php:477:	add_clean_index($wpdb->categories, 'category_nicename');
+wp-admin/includes/upgrade.php:478:	add_clean_index($wpdb->comments, 'comment_approved');
+wp-admin/includes/upgrade.php:479:	add_clean_index($wpdb->comments, 'comment_post_ID');
+wp-admin/includes/upgrade.php:480:	add_clean_index($wpdb->links , 'link_category');
+wp-admin/includes/upgrade.php:481:	add_clean_index($wpdb->links , 'link_visible');
+wp-admin/includes/upgrade.php:490:	global $wpdb;
+wp-admin/includes/upgrade.php:497:			$wpdb->update( $wpdb->users, array('user_nicename' => $newname), array('ID' => $user->ID) );
+wp-admin/includes/upgrade.php:504:			$wpdb->update( $wpdb->users, array('user_pass' => md5($row->user_pass)), array('ID' => $row->ID) );
+wp-admin/includes/upgrade.php:535:		$wpdb->query("UPDATE $wpdb->posts SET post_date_gmt = DATE_ADD(post_date, INTERVAL '$add_hours:$add_minutes' HOUR_MINUTE)");
+wp-admin/includes/upgrade.php:536:		$wpdb->query("UPDATE $wpdb->posts SET post_modified = post_date");
+wp-admin/includes/upgrade.php:537:		$wpdb->query("UPDATE $wpdb->posts SET post_modified_gmt = DATE_ADD(post_modified, INTERVAL '$add_hours:$add_minutes' HOUR_MINUTE) WHERE post_modified != '0000-00-00 00:00:00'");
+wp-admin/includes/upgrade.php:538:		$wpdb->query("UPDATE $wpdb->comments SET comment_date_gmt = DATE_ADD(comment_date, INTERVAL '$add_hours:$add_minutes' HOUR_MINUTE)");
+wp-admin/includes/upgrade.php:539:		$wpdb->query("UPDATE $wpdb->users SET user_registered = DATE_ADD(user_registered, INTERVAL '$add_hours:$add_minutes' HOUR_MINUTE)");
+wp-admin/includes/upgrade.php:550:	global $wpdb;
+wp-admin/includes/upgrade.php:564:			$wpdb->update( $wpdb->posts, compact('post_title', 'post_content', 'post_excerpt', 'guid'), array('ID' => $post->ID) );
+wp-admin/includes/upgrade.php:576:			$wpdb->update($wpdb->comments, compact('comment_content', 'comment_author'), array('comment_ID' => $comment->comment_ID) );
+wp-admin/includes/upgrade.php:587:			$wpdb->update( $wpdb->links, compact('link_name', 'link_description'), array('link_id' => $link->link_id) );
+wp-admin/includes/upgrade.php:601:	$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'optionvalues');
+wp-admin/includes/upgrade.php:602:	$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'optiontypes');
+wp-admin/includes/upgrade.php:603:	$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'optiongroups');
+wp-admin/includes/upgrade.php:604:	$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'optiongroup_options');
+wp-admin/includes/upgrade.php:607:	$wpdb->query("UPDATE $wpdb->comments SET comment_type='trackback', comment_content = REPLACE(comment_content, '<trackback />', '') WHERE comment_content LIKE '<trackback />%'");
+wp-admin/includes/upgrade.php:608:	$wpdb->query("UPDATE $wpdb->comments SET comment_type='pingback', comment_content = REPLACE(comment_content, '<pingback />', '') WHERE comment_content LIKE '<pingback />%'");
+wp-admin/includes/upgrade.php:618:				$wpdb->query("DELETE FROM $wpdb->options WHERE option_id IN ($dupe_ids)");
+wp-admin/includes/upgrade.php:632:	global $wpdb, $wp_current_db_version;
+wp-admin/includes/upgrade.php:639:			update_user_meta( $user->ID, 'first_name', $wpdb->escape($user->user_firstname) );
+wp-admin/includes/upgrade.php:641:			update_user_meta( $user->ID, 'last_name', $wpdb->escape($user->user_lastname) );
+wp-admin/includes/upgrade.php:643:			update_user_meta( $user->ID, 'nickname', $wpdb->escape($user->user_nickname) );
+wp-admin/includes/upgrade.php:645:			update_user_meta( $user->ID, $wpdb->prefix . 'user_level', $user->user_level );
+wp-admin/includes/upgrade.php:647:			update_user_meta( $user->ID, 'icq', $wpdb->escape($user->user_icq) );
+wp-admin/includes/upgrade.php:649:			update_user_meta( $user->ID, 'aim', $wpdb->escape($user->user_aim) );
+wp-admin/includes/upgrade.php:651:			update_user_meta( $user->ID, 'msn', $wpdb->escape($user->user_msn) );
+wp-admin/includes/upgrade.php:653:			update_user_meta( $user->ID, 'yim', $wpdb->escape($user->user_icq) );
+wp-admin/includes/upgrade.php:655:			update_user_meta( $user->ID, 'description', $wpdb->escape($user->user_description) );
+wp-admin/includes/upgrade.php:666:			$wpdb->update( $wpdb->users, array('display_name' => $id), array('ID' => $user->ID) );
+wp-admin/includes/upgrade.php:670:		$caps = get_user_meta( $user->ID, $wpdb->prefix . 'capabilities');
+wp-admin/includes/upgrade.php:672:			$level = get_user_meta($user->ID, $wpdb->prefix . 'user_level', true);
+wp-admin/includes/upgrade.php:674:			update_user_meta( $user->ID, $wpdb->prefix . 'capabilities', array($role => true) );
+wp-admin/includes/upgrade.php:679:	$wpdb->hide_errors();
+wp-admin/includes/upgrade.php:681:		$wpdb->query("ALTER TABLE $wpdb->users DROP $old");
+wp-admin/includes/upgrade.php:682:	$wpdb->show_errors();
+wp-admin/includes/upgrade.php:688:			$wpdb->update( $wpdb->posts, array('comment_count' => $comment->c), array('ID' => $comment->comment_post_ID) );
+wp-admin/includes/upgrade.php:695:			$wpdb->update( $wpdb->posts, array(	'post_status' => 'attachment',
+wp-admin/includes/upgrade.php:713:	global $wpdb, $wp_current_db_version;
+wp-admin/includes/upgrade.php:731:			$wpdb->query( $wpdb->prepare("UPDATE $wpdb->posts SET post_status = %s, post_type = %s WHERE ID = %d", $status, $type, $post->ID) );
+wp-admin/includes/upgrade.php:742:		$wpdb->query ("UPDATE $wpdb->posts SET post_status = 'future' WHERE post_status = 'publish' AND post_date_gmt > '$now'");
+wp-admin/includes/upgrade.php:757:	global $wp_current_db_version, $wpdb;
+wp-admin/includes/upgrade.php:790:				$wpdb->query( $wpdb->prepare("UPDATE $wpdb->terms SET term_group = %d WHERE term_id = %d", $term_group, $id) );
+wp-admin/includes/upgrade.php:794:		$wpdb->query( $wpdb->prepare("INSERT INTO $wpdb->terms (term_id, name, slug, term_group) VALUES
+wp-admin/includes/upgrade.php:801:			$wpdb->query( $wpdb->prepare("INSERT INTO $wpdb->term_taxonomy (term_id, taxonomy, description, parent, count) VALUES ( %d, %s, %s, %d, %d)", $term_id, $taxonomy, $description, $parent, $count) );
+wp-admin/includes/upgrade.php:802:			$tt_ids[$term_id][$taxonomy] = (int) $wpdb->insert_id;
+wp-admin/includes/upgrade.php:808:			$wpdb->query( $wpdb->prepare("INSERT INTO $wpdb->term_taxonomy (term_id, taxonomy, description, parent, count) VALUES ( %d, %s, %s, %d, %d)", $term_id, $taxonomy, $description, $parent, $count) );
+wp-admin/includes/upgrade.php:809:			$tt_ids[$term_id][$taxonomy] = (int) $wpdb->insert_id;
+wp-admin/includes/upgrade.php:816:			$wpdb->insert( $wpdb->term_taxonomy, compact('term_id', 'taxonomy', 'description', 'parent', 'count') );
+wp-admin/includes/upgrade.php:817:			$tt_ids[$term_id][$taxonomy] = (int) $wpdb->insert_id;
+wp-admin/includes/upgrade.php:823:			$wpdb->insert( $wpdb->term_taxonomy, compact('term_id', 'taxonomy', 'description', 'parent', 'count') );
+wp-admin/includes/upgrade.php:824:			$tt_ids[$term_id][$taxonomy] = (int) $wpdb->insert_id;
+wp-admin/includes/upgrade.php:843:		$wpdb->insert( $wpdb->term_relationships, array('object_id' => $post_id, 'term_taxonomy_id' => $tt_id) );
+wp-admin/includes/upgrade.php:857:			$name = $wpdb->escape($category->cat_name);
+wp-admin/includes/upgrade.php:868:				$wpdb->insert( $wpdb->terms, compact('name', 'slug', 'term_group') );
+wp-admin/includes/upgrade.php:869:				$term_id = (int) $wpdb->insert_id;
+wp-admin/includes/upgrade.php:875:			$wpdb->insert( $wpdb->term_taxonomy, array('term_id' => $term_id, 'taxonomy' => 'link_category', 'description' => '', 'parent' => 0, 'count' => 0) );
+wp-admin/includes/upgrade.php:876:			$tt_ids[$term_id] = (int) $wpdb->insert_id;
+wp-admin/includes/upgrade.php:891:			$wpdb->insert( $wpdb->term_relationships, array('object_id' => $link->link_id, 'term_taxonomy_id' => $tt_id) );
+wp-admin/includes/upgrade.php:905:			$wpdb->insert( $wpdb->term_relationships, array('object_id' => $link_id, 'term_taxonomy_id' => $tt_id) );
+wp-admin/includes/upgrade.php:911:		$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'linkcategories');
+wp-admin/includes/upgrade.php:921:		$wpdb->update( $wpdb->term_taxonomy, array('count' => $count), array('term_taxonomy_id' => $term->term_taxonomy_id) );
+wp-admin/includes/upgrade.php:931:	global $wpdb;
+wp-admin/includes/upgrade.php:933:	$wpdb->hide_errors();
+wp-admin/includes/upgrade.php:935:		$wpdb->query("ALTER TABLE $wpdb->options DROP $old");
+wp-admin/includes/upgrade.php:936:	$wpdb->show_errors();
+wp-admin/includes/upgrade.php:945:	global $wpdb;
+wp-admin/includes/upgrade.php:946:	$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'categories');
+wp-admin/includes/upgrade.php:947:	$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'link2cat');
+wp-admin/includes/upgrade.php:948:	$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'post2cat');
+wp-admin/includes/upgrade.php:958:	global $wpdb;
+wp-admin/includes/upgrade.php:959:	$wpdb->query("UPDATE $wpdb->postmeta SET meta_key = '_wp_old_slug' WHERE meta_key = 'old_slug'");
+wp-admin/includes/upgrade.php:982:	global $wpdb;
+wp-admin/includes/upgrade.php:984:	$wpdb->query("UPDATE $wpdb->users SET user_activation_key = ''");
+wp-admin/includes/upgrade.php:1005:	global $wpdb, $wp_current_db_version;
+wp-admin/includes/upgrade.php:1012:		$wpdb->query( "UPDATE $wpdb->posts SET post_date = post_modified WHERE post_date = '0000-00-00 00:00:00'" );
+wp-admin/includes/upgrade.php:1021:	global $wp_current_db_version, $wpdb;
+wp-admin/includes/upgrade.php:1038:		refresh_blog_details( $wpdb->blogid );
+wp-admin/includes/upgrade.php:1065:	global $wp_current_db_version, $wpdb;
+wp-admin/includes/upgrade.php:1075:		$prefix = like_escape($wpdb->base_prefix);
+wp-admin/includes/upgrade.php:1076:		$wpdb->query( "DELETE FROM $wpdb->usermeta WHERE meta_key LIKE '{$prefix}%meta-box-hidden%' OR meta_key LIKE '{$prefix}%closedpostboxes%' OR meta_key LIKE '{$prefix}%manage-%-columns-hidden%' OR meta_key LIKE '{$prefix}%meta-box-order%' OR meta_key LIKE '{$prefix}%metaboxorder%' OR meta_key LIKE '{$prefix}%screen_layout%'
+wp-admin/includes/upgrade.php:1088:	global $wp_current_db_version, $wpdb, $wp_registered_widgets, $sidebars_widgets;
+wp-admin/includes/upgrade.php:1091:		$wpdb->query( "DELETE FROM $wpdb->usermeta WHERE meta_key IN ('show_admin_bar_admin', 'plugins_last_view')" );
+wp-admin/includes/upgrade.php:1157:	global $wp_current_db_version, $wpdb;
+wp-admin/includes/upgrade.php:1160:		$wpdb->hide_errors();
+wp-admin/includes/upgrade.php:1161:		$wpdb->query( "ALTER TABLE $wpdb->options DROP COLUMN blog_id" );
+wp-admin/includes/upgrade.php:1162:		$wpdb->show_errors();
+wp-admin/includes/upgrade.php:1166:		$wpdb->hide_errors();
+wp-admin/includes/upgrade.php:1167:		$wpdb->query("ALTER TABLE $wpdb->comments DROP INDEX comment_approved");
+wp-admin/includes/upgrade.php:1168:		$wpdb->show_errors();
+wp-admin/includes/upgrade.php:1172:		$wpdb->query( "DELETE FROM $wpdb->usermeta WHERE meta_key = 'themes_last_view'" );
+wp-admin/includes/upgrade.php:1190:	global $wp_current_db_version, $wpdb;
+wp-admin/includes/upgrade.php:1203:			$wpdb->query( "DELETE FROM $wpdb->usermeta WHERE meta_key IN ('$meta_keys')" );
+wp-admin/includes/upgrade.php:1217:	global $wp_current_db_version, $wpdb;
+wp-admin/includes/upgrade.php:1298:	global $wpdb;
+wp-admin/includes/upgrade.php:1299:	if ( $wpdb->get_var("SHOW TABLES LIKE '$table_name'") == $table_name )
+wp-admin/includes/upgrade.php:1302:	$q = $wpdb->query($create_ddl);
+wp-admin/includes/upgrade.php:1304:	if ( $wpdb->get_var("SHOW TABLES LIKE '$table_name'") == $table_name )
+wp-admin/includes/upgrade.php:1321:	global $wpdb;
+wp-admin/includes/upgrade.php:1322:	$wpdb->hide_errors();
+wp-admin/includes/upgrade.php:1323:	$wpdb->query("ALTER TABLE `$table` DROP INDEX `$index`");
+wp-admin/includes/upgrade.php:1326:		$wpdb->query("ALTER TABLE `$table` DROP INDEX `{$index}_$i`");
+wp-admin/includes/upgrade.php:1328:	$wpdb->show_errors();
+wp-admin/includes/upgrade.php:1344:	global $wpdb;
+wp-admin/includes/upgrade.php:1346:	$wpdb->query("ALTER TABLE `$table` ADD INDEX ( `$index` )");
+wp-admin/includes/upgrade.php:1357:	global $wpdb;
+wp-admin/includes/upgrade.php:1358:	foreach ($wpdb->get_col("DESC $table_name", 0) as $column ) {
+wp-admin/includes/upgrade.php:1364:	$q = $wpdb->query($create_ddl);
+wp-admin/includes/upgrade.php:1366:	foreach ($wpdb->get_col("DESC $table_name", 0) as $column ) {
+wp-admin/includes/upgrade.php:1382:	global $wpdb;
+wp-admin/includes/upgrade.php:1404:	global $wpdb;
+wp-admin/includes/upgrade.php:1466:	global $wpdb;
+wp-admin/includes/upgrade.php:1500:	$global_tables = $wpdb->tables( 'global' );
+wp-admin/includes/upgrade.php:1507:		$wpdb->suppress_errors();
+wp-admin/includes/upgrade.php:1508:		$tablefields = $wpdb->get_results("DESCRIBE {$table};");
+wp-admin/includes/upgrade.php:1509:		$wpdb->suppress_errors( false );
+wp-admin/includes/upgrade.php:1594:		$tableindices = $wpdb->get_results("SHOW INDEX FROM {$table};");
+wp-admin/includes/upgrade.php:1656:			$wpdb->query($query);
+wp-admin/includes/upgrade.php:1920:	global $wpdb;
+wp-admin/includes/upgrade.php:1921:	$result = $wpdb->check_database_version();
+wp-admin/includes/upgrade.php:1949:	global $wp_current_db_version, $wpdb;
+wp-admin/includes/upgrade.php:1961:	global $wp_current_db_version, $wp_db_version, $wpdb;
+wp-admin/includes/upgrade.php:1966:		$wpdb->query("DELETE o1 FROM $wpdb->options AS o1 JOIN $wpdb->options AS o2 USING (`option_name`) WHERE o2.option_id > o1.option_id");
+wp-admin/includes/upgrade.php:1969:		$wpdb->query("ALTER TABLE $wpdb->options DROP PRIMARY KEY, ADD PRIMARY KEY(option_id)");
+wp-admin/includes/upgrade.php:1972:		$wpdb->query("ALTER TABLE $wpdb->options DROP INDEX option_name");
+wp-admin/includes/upgrade.php:1985:	global $wpdb, $charset_collate;
+wp-admin/includes/upgrade.php:1987:CREATE TABLE $wpdb->sitecategories (
+wp-admin/includes/class-wp-ms-sites-list-table.php:24:		global $s, $mode, $wpdb, $current_site;
+wp-admin/includes/class-wp-ms-sites-list-table.php:65:				FROM {$wpdb->blogs}
+wp-admin/includes/class-wp-ms-sites-list-table.php:66:				WHERE site_id = '{$wpdb->siteid}'
+wp-admin/includes/class-wp-ms-sites-list-table.php:67:				AND {$wpdb->blogs}.blog_id IN (" . implode( ', ', $reg_blog_ids ) . ")";
+wp-admin/includes/class-wp-ms-sites-list-table.php:70:				$query .= " AND ( {$wpdb->blogs}.blog_id = '{$like_s}' )";
+wp-admin/includes/class-wp-ms-sites-list-table.php:74:				$query .= " AND ( {$wpdb->blogs}.domain LIKE '$blog_s' ) ";
+wp-admin/includes/class-wp-ms-sites-list-table.php:80:				$query .= " AND  ( {$wpdb->blogs}.path LIKE '$blog_s' )";
+wp-admin/includes/class-wp-ms-sites-list-table.php:110:		$this->items = $wpdb->get_results( $query, ARRAY_A );
+wp-admin/includes/class-wp-importer.php:20:		global $wpdb;
+wp-admin/includes/class-wp-importer.php:31:			$results = $wpdb->get_results( $sql );
+wp-admin/includes/class-wp-importer.php:57:		global $wpdb;
+wp-admin/includes/class-wp-importer.php:65:		$result = $wpdb->get_results( $sql );
+wp-admin/includes/class-wp-importer.php:83:		global $wpdb;
+wp-admin/includes/class-wp-importer.php:93:			$results = $wpdb->get_results( $sql );
+wp-admin/includes/class-wp-importer.php:238:		global $wpdb, $wp_actions;
+wp-admin/includes/class-wp-importer.php:240:		$wpdb->queries = array();
+wp-admin/includes/bookmark.php:81:	global $wpdb;
+wp-admin/includes/bookmark.php:87:	$wpdb->delete( $wpdb->links, array( 'link_id' => $link_id ) );
+wp-admin/includes/bookmark.php:133:	global $wpdb;
+wp-admin/includes/bookmark.php:191:		if ( false === $wpdb->update( $wpdb->links, compact('link_url', 'link_name', 'link_image', 'link_target', 'link_description', 'link_visible', 'link_rating', 'link_rel', 'link_notes', 'link_rss'), compact('link_id') ) ) {
+wp-admin/includes/bookmark.php:193:				return new WP_Error( 'db_update_error', __( 'Could not update link in the database' ), $wpdb->last_error );
+wp-admin/includes/bookmark.php:198:		if ( false === $wpdb->insert( $wpdb->links, compact('link_url', 'link_name', 'link_image', 'link_target', 'link_description', 'link_visible', 'link_owner', 'link_rating', 'link_rel', 'link_notes', 'link_rss') ) ) {
+wp-admin/includes/bookmark.php:200:				return new WP_Error( 'db_insert_error', __( 'Could not insert link into the database' ), $wpdb->last_error );
+wp-admin/includes/bookmark.php:204:		$link_id = (int) $wpdb->insert_id;
+wp-admin/install-helper.php:15: * if (check_column($wpdb->comments, 'comment_author', 'tinytext'))
+wp-admin/install-helper.php:19: * $tablename = $wpdb->links;
+wp-admin/install-helper.php:21: * if (!check_column($wpdb->links, 'link_description', 'varchar(255)')) {
+wp-admin/install-helper.php:22: *     $ddl = "ALTER TABLE $wpdb->links MODIFY COLUMN link_description varchar(255) NOT NULL DEFAULT '' ";
+wp-admin/install-helper.php:23: *     $q = $wpdb->query($ddl);
+wp-admin/install-helper.php:26: * if (check_column($wpdb->links, 'link_description', 'varchar(255)')) {
+wp-admin/install-helper.php:48: * @uses $wpdb
+wp-admin/install-helper.php:55:	global $wpdb;
+wp-admin/install-helper.php:56:	foreach ($wpdb->get_col("SHOW TABLES",0) as $table ) {
+wp-admin/install-helper.php:62:	$wpdb->query($create_ddl);
+wp-admin/install-helper.php:64:	foreach ($wpdb->get_col("SHOW TABLES",0) as $table ) {
+wp-admin/install-helper.php:80: * @uses $wpdb
+wp-admin/install-helper.php:88:	global $wpdb;
+wp-admin/install-helper.php:89:	foreach ($wpdb->get_col("DESC $table_name",0) as $column ) {
+wp-admin/install-helper.php:96:	$wpdb->query($create_ddl);
+wp-admin/install-helper.php:98:	foreach ($wpdb->get_col("DESC $table_name",0) as $column ) {
+wp-admin/install-helper.php:113: * @uses $wpdb
+wp-admin/install-helper.php:121:	global $wpdb;
+wp-admin/install-helper.php:122:	foreach ($wpdb->get_col("DESC $table_name",0) as $column ) {
+wp-admin/install-helper.php:125:			$wpdb->query($drop_ddl);
+wp-admin/install-helper.php:127:			foreach ($wpdb->get_col("DESC $table_name",0) as $column ) {
+wp-admin/install-helper.php:168:	global $wpdb;
+wp-admin/install-helper.php:170:	$results = $wpdb->get_results("DESC $table_name");
+wp-admin/export.php:106:	global $wpdb, $wp_locale;
+wp-admin/export.php:108:	$months = $wpdb->get_results( $wpdb->prepare( "
+wp-admin/export.php:110:		FROM $wpdb->posts
+wp-admin/ms-delete-site.php:21:		wpmu_delete_blog( $wpdb->blogid );
+wp-admin/user-new.php:124:			wpmu_signup_user( $new_user_login, $_REQUEST[ 'email' ], array( 'add_to_blog' => $wpdb->blogid, 'new_role' => $_REQUEST[ 'role' ] ) );
+wp-admin/upgrade.php:41:$mysql_version  = $wpdb->db_version();
+wp-admin/upgrade.php:43:if ( file_exists( WP_CONTENT_DIR . '/db.php' ) && empty( $wpdb->is_mysql ) )
+wp-admin/upgrade.php:103:<?php printf( __( '%s queries' ), $wpdb->num_queries ); ?>
+wp-admin/user-edit.php:89:			$wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->signups} SET user_email = %s WHERE user_login = %s", $user->user_email, $current_user->user_login ) );
+wp-admin/user-edit.php:121:		$wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->signups} SET user_email = %s WHERE user_login = %s", $_POST[ 'email' ], $user_login ) );
+wp-admin/user-edit.php:125:	$blog_prefix = $wpdb->get_blog_prefix();
+wp-admin/setup-config.php:190:	if ( ! empty( $wpdb->error ) )
+wp-admin/setup-config.php:191:		wp_die( $wpdb->error->get_error_message() . $tryagain_link );
+wp-admin/link.php:61:		//$q = $wpdb->query("update $wpdb->links SET link_category='$category' WHERE link_id IN ($all_links)");
+wp-admin/network.php:31:foreach ( $wpdb->tables( 'ms_global' ) as $table => $prefixed_table )
+wp-admin/network.php:32:	$wpdb->$table = $prefixed_table;
+wp-admin/network.php:41:	global $wpdb;
+wp-admin/network.php:42:	if ( $wpdb->get_var( "SHOW TABLES LIKE '$wpdb->site'" ) )
+wp-admin/network.php:67:	global $wpdb;
+wp-admin/network.php:310:	global $wpdb;
+wp-admin/network/site-settings.php:115:		$blog_prefix = $wpdb->get_blog_prefix( $id );
+wp-admin/network/site-users.php:90:					$blog_prefix = $wpdb->get_blog_prefix( $id );
+wp-admin/network/site-new.php:82:	$wpdb->hide_errors();
+wp-admin/network/site-new.php:84:	$wpdb->show_errors();
+wp-admin/install.php:41:/** Load wpdb */
+wp-admin/install.php:79:	global $wpdb;
+wp-admin/install.php:80:	$user_table = ( $wpdb->get_var("SHOW TABLES LIKE '$wpdb->users'") != null );
+wp-admin/install.php:151:$mysql_version  = $wpdb->db_version();
+wp-admin/install.php:167:if ( ! is_string( $wpdb->base_prefix ) || '' === $wpdb->base_prefix ) {
+wp-admin/install.php:187:		if ( ! empty( $wpdb->error ) )
+wp-admin/install.php:188:			wp_die( $wpdb->error->get_error_message() );
+wp-admin/install.php:222:			$wpdb->show_errors();
+wp-comments-post.php:60:	$comment_author       = $wpdb->escape($user->display_name);
+wp-comments-post.php:61:	$comment_author_email = $wpdb->escape($user->user_email);
+wp-comments-post.php:62:	$comment_author_url   = $wpdb->escape($user->user_url);
+wp-content/plugins/akismet/akismet.php:216:	global $wpdb;
+wp-content/plugins/akismet/akismet.php:426:	global $wpdb;
+wp-content/plugins/akismet/akismet.php:435:	$wpdb->query("DELETE FROM $wpdb->comments WHERE comment_id IN ( $comma_comment_ids )");
+wp-content/plugins/akismet/akismet.php:436:	$wpdb->query("DELETE FROM $wpdb->commentmeta WHERE comment_id IN ( $comma_comment_ids )");
+wp-content/plugins/akismet/akismet.php:440:		$wpdb->query("OPTIMIZE TABLE $wpdb->comments");
+wp-content/plugins/akismet/akismet.php:445:	global $wpdb; 
+wp-content/plugins/akismet/akismet.php:473:		$wpdb->query( "OPTIMIZE TABLE $wpdb->commentmeta" ); 
+wp-content/plugins/akismet/akismet.php:482:    global $wpdb, $akismet_api_host, $akismet_api_port;
+wp-content/plugins/akismet/akismet.php:510:	global $wpdb;
+wp-content/plugins/akismet/akismet.php:521:	$comment_errors = $wpdb->get_col( "
+wp-content/plugins/akismet/akismet.php:523:		FROM {$wpdb->prefix}commentmeta
+wp-content/plugins/akismet/admin.php:312:			global $wpdb;
+wp-content/plugins/akismet/admin.php:502:	global $wpdb, $akismet_api_host, $akismet_api_port, $current_user, $current_site;
+wp-content/plugins/akismet/admin.php:552:	global $wpdb, $akismet_api_host, $akismet_api_port, $current_user, $current_site;
+wp-content/plugins/akismet/admin.php:651:	global $wpdb;
+wp-content/plugins/akismet/admin.php:668:		$type  = $wpdb->escape( $type );
+wp-content/plugins/akismet/admin.php:676:	global $wpdb, $akismet_api_host, $akismet_api_port;
+wp-content/plugins/akismet/admin.php:736:        global $wpdb;
+wp-content/plugins/akismet/admin.php:751:        global $wpdb;
+wp-content/plugins/akismet/legacy.php:4:	global $wpdb;
+wp-content/plugins/akismet/legacy.php:21:			$type = $wpdb->escape( $type );
+wp-content/plugins/akismet/legacy.php:32:	global $wpdb;
+wp-content/plugins/akismet/legacy.php:41:	global $wpdb, $submenu, $wp_db_version;
+wp-content/plugins/akismet/legacy.php:55:	global $wpdb, $comment, $akismet_caught, $akismet_nonce;
+wp-content/plugins/akismet/legacy.php:69:				$wpdb->query("UPDATE $wpdb->comments SET comment_approved = '1' WHERE comment_ID = '$comment'");
+wp-content/plugins/akismet/legacy.php:82:		$delete_time = $wpdb->escape( $_POST['display_time'] );
+wp-content/plugins/akismet/legacy.php:86:			$wpdb->query( "DELETE FROM $wpdb->comments WHERE comment_id IN ( " . implode( ', ', $comment_ids ) . " )");
+wp-content/plugins/akismet/legacy.php:182:	$s = $wpdb->escape($_POST['s']);
+wp-cron.php:31:	global $_wp_using_ext_object_cache, $wpdb;
+wp-includes/rewrite.php:822:		global $wpdb;
+wp-includes/ms-settings.php:121:			$msg = ! $wpdb->get_var( "SHOW TABLES LIKE '$wpdb->site'" ) ? ' ' . __( 'Database tables are missing.' ) : '';
+wp-includes/ms-settings.php:126:$wpdb->set_prefix( $table_prefix, false ); // $table_prefix can be set in sunrise.php
+wp-includes/ms-settings.php:127:$wpdb->set_blog_id( $current_blog->blog_id, $current_blog->site_id );
+wp-includes/ms-settings.php:128:$table_prefix = $wpdb->get_blog_prefix();
+wp-includes/ms-deprecated.php:149:	global $wpdb;
+wp-includes/ms-load.php:72:	global $wpdb;
+wp-includes/ms-load.php:117:	global $wpdb;
+wp-includes/ms-load.php:138:	global $wpdb, $current_site, $domain, $path, $sites, $cookie_domain;
+wp-includes/ms-load.php:227: * Used when a blog's tables do not exist. Checks for a missing $wpdb->site table as well.
+wp-includes/ms-load.php:233:	global $wpdb, $domain, $path;
+wp-includes/ms-load.php:243:	if ( false && !$wpdb->get_var( "SHOW TABLES LIKE '$wpdb->site'" ) )
+wp-includes/ms-load.php:244:		$msg .= '<p>' . sprintf( __( '<strong>Database tables are missing.</strong> This means that MySQL is not running, WordPress was not installed properly, or someone deleted <code>%s</code>. You really should look at your database now.' ), $wpdb->site ) . '</p>';
+wp-includes/ms-load.php:246:		$msg .= '<p>' . sprintf( __( '<strong>Could not find site <code>%1$s</code>.</strong> Searched for table <code>%2$s</code> in database <code>%3$s</code>. Is that right?' ), rtrim( $domain . $path, '/' ), $wpdb->blogs, DB_NAME ) . '</p>';
+wp-includes/ms-load.php:250:	foreach ( $wpdb->tables('global') as $t => $table ) {
+wp-includes/pluggable.php:157:	global $wpdb;
+wp-includes/pluggable.php:1084: * @uses $wpdb
+wp-includes/pluggable.php:1090:	global $wpdb;
+wp-includes/pluggable.php:1557: * @uses $wpdb WordPress database object for queries
+wp-includes/pluggable.php:1564:	global $wpdb;
+wp-includes/pluggable.php:1567:	$wpdb->update($wpdb->users, array('user_pass' => $hash, 'user_activation_key' => ''), array('ID' => $user_id) );
+wp-includes/capabilities.php:87:	 * The role key is set to the current prefix for the $wpdb object with
+wp-includes/capabilities.php:93:	 * @uses $wpdb Used to get the database prefix.
+wp-includes/capabilities.php:97:		global $wpdb, $wp_user_roles;
+wp-includes/capabilities.php:98:		$this->role_key = $wpdb->prefix . 'user_roles';
+wp-includes/capabilities.php:121:	 * after switching wpdb to a new blog ID.
+wp-includes/capabilities.php:131:		global $wpdb, $wp_user_roles;
+wp-includes/capabilities.php:134:		$this->role_key = $wpdb->prefix . 'user_roles';
+wp-includes/capabilities.php:475:			$prefix = $GLOBALS['wpdb']->prefix;
+wp-includes/capabilities.php:531:		global $wpdb;
+wp-includes/capabilities.php:573:		if ( !$user = $wpdb->get_row( $wpdb->prepare(
+wp-includes/capabilities.php:707:		global $wpdb;
+wp-includes/capabilities.php:710:			$this->cap_key = $wpdb->prefix . 'capabilities';
+wp-includes/capabilities.php:857:		global $wpdb;
+wp-includes/capabilities.php:859:		update_user_meta( $this->ID, $wpdb->prefix . 'user_level', $this->user_level );
+wp-includes/capabilities.php:898:		global $wpdb;
+wp-includes/capabilities.php:901:		delete_user_meta( $this->ID, $wpdb->prefix . 'user_level' );
+wp-includes/capabilities.php:969:		global $wpdb;
+wp-includes/capabilities.php:971:			$cap_key = $wpdb->get_blog_prefix( $blog_id ) . 'capabilities';
+wp-includes/admin-bar.php:280:	global $wpdb;
+wp-includes/taxonomy.php:498: * @uses $wpdb
+wp-includes/taxonomy.php:508:	global $wpdb;
+wp-includes/taxonomy.php:662:		global $wpdb;
+wp-includes/taxonomy.php:691:				$alias = $i ? 'tt' . $i : $wpdb->term_relationships;
+wp-includes/taxonomy.php:693:				$join .= " INNER JOIN $wpdb->term_relationships";
+wp-includes/taxonomy.php:707:					FROM $wpdb->term_relationships
+wp-includes/taxonomy.php:721:					FROM $wpdb->term_relationships
+wp-includes/taxonomy.php:780:		global $wpdb;
+wp-includes/taxonomy.php:794:				$terms = $wpdb->get_col( "
+wp-includes/taxonomy.php:796:					FROM $wpdb->term_taxonomy
+wp-includes/taxonomy.php:797:					INNER JOIN $wpdb->terms USING (term_id)
+wp-includes/taxonomy.php:799:					AND $wpdb->terms.{$query['field']} IN ($terms)
+wp-includes/taxonomy.php:804:				$terms = $wpdb->get_col( "
+wp-includes/taxonomy.php:806:					FROM $wpdb->term_taxonomy
+wp-includes/taxonomy.php:812:				$terms = $wpdb->get_col( "
+wp-includes/taxonomy.php:814:					FROM $wpdb->term_taxonomy
+wp-includes/taxonomy.php:838: * be able to be captured by the hooks. Failure would be the same value as $wpdb
+wp-includes/taxonomy.php:859: * @uses $wpdb
+wp-includes/taxonomy.php:871:	global $wpdb;
+wp-includes/taxonomy.php:933: * @uses $wpdb
+wp-includes/taxonomy.php:945:	global $wpdb;
+wp-includes/taxonomy.php:999: * @uses $wpdb
+wp-includes/taxonomy.php:1180: * @uses $wpdb
+wp-includes/taxonomy.php:1188:	global $wpdb;
+wp-includes/taxonomy.php:1337:		$where .= $wpdb->prepare( " AND t.name LIKE %s", $name__like . '%' );
+wp-includes/taxonomy.php:1360:		$where .= $wpdb->prepare( " AND (t.name LIKE %s)", '%' . $search . '%');
+wp-includes/taxonomy.php:1385:	$join = "INNER JOIN $wpdb->term_taxonomy AS tt ON t.term_id = tt.term_id";
+wp-includes/taxonomy.php:1397:		$term_count = $wpdb->get_var($query);
+wp-includes/taxonomy.php:1401:	$terms = $wpdb->get_results($query);
+wp-includes/taxonomy.php:1473: * @uses $wpdb
+wp-includes/taxonomy.php:1482:	global $wpdb;
+wp-includes/taxonomy.php:1624: * @uses $wpdb
+wp-includes/taxonomy.php:1715: * @uses $wpdb
+wp-includes/taxonomy.php:1721:	global $wpdb;
+wp-includes/taxonomy.php:1732:		$wpdb->query( $wpdb->prepare("DELETE FROM $wpdb->term_relationships WHERE object_id = %d AND term_taxonomy_id IN ($in_tt_ids)", $object_id) );
+wp-includes/taxonomy.php:1753: * @uses $wpdb
+wp-includes/taxonomy.php:1764:	global $wpdb;
+wp-includes/taxonomy.php:1801:		$wpdb->update( $wpdb->term_taxonomy, compact( 'parent' ), array( 'parent' => $term_obj->term_id) + compact( 'taxonomy' ) );
+wp-includes/taxonomy.php:1829:	$wpdb->delete( $wpdb->term_taxonomy, array( 'term_taxonomy_id' => $tt_id ) );
+wp-includes/taxonomy.php:1834:		$wpdb->delete( $wpdb->terms, array( 'term_id' => $term ) );
+wp-includes/taxonomy.php:1883: * @uses $wpdb
+wp-includes/taxonomy.php:1891:	global $wpdb;
+wp-includes/taxonomy.php:1974:		$terms = array_merge($terms, $wpdb->get_results($query));
+wp-includes/taxonomy.php:1977:		$terms = array_merge($terms, $wpdb->get_col($query));
+wp-includes/taxonomy.php:2027: * @uses $wpdb
+wp-includes/taxonomy.php:2042:	global $wpdb;
+wp-includes/taxonomy.php:2081:			$wpdb->update($wpdb->terms, compact('term_group'), array('term_id' => $alias->term_id) );
+wp-includes/taxonomy.php:2096:				if ( false === $wpdb->insert( $wpdb->terms, compact( 'name', 'slug', 'term_group' ) ) )
+wp-includes/taxonomy.php:2097:					return new WP_Error('db_insert_error', __('Could not insert term into the database'), $wpdb->last_error);
+wp-includes/taxonomy.php:2098:				$term_id = (int) $wpdb->insert_id;
+wp-includes/taxonomy.php:2103:			if ( false === $wpdb->insert( $wpdb->terms, compact( 'name', 'slug', 'term_group' ) ) )
+wp-includes/taxonomy.php:2104:				return new WP_Error('db_insert_error', __('Could not insert term into the database'), $wpdb->last_error);
+wp-includes/taxonomy.php:2105:			$term_id = (int) $wpdb->insert_id;
+wp-includes/taxonomy.php:2113:		if ( false === $wpdb->insert( $wpdb->terms, compact( 'name', 'slug', 'term_group' ) ) )
+wp-includes/taxonomy.php:2114:			return new WP_Error('db_insert_error', __('Could not insert term into the database'), $wpdb->last_error);
+wp-includes/taxonomy.php:2115:		$term_id = (int) $wpdb->insert_id;
+wp-includes/taxonomy.php:2122:		$wpdb->update( $wpdb->terms, compact( 'slug' ), compact( 'term_id' ) );
+wp-includes/taxonomy.php:2131:	$wpdb->insert( $wpdb->term_taxonomy, compact( 'term_id', 'taxonomy', 'description', 'parent') + array( 'count' => 0 ) );
+wp-includes/taxonomy.php:2132:	$tt_id = (int) $wpdb->insert_id;
+wp-includes/taxonomy.php:2161: * @uses $wpdb
+wp-includes/taxonomy.php:2171:	global $wpdb;
+wp-includes/taxonomy.php:2209:		$wpdb->insert( $wpdb->term_relationships, array( 'object_id' => $object_id, 'term_taxonomy_id' => $tt_id ) );
+wp-includes/taxonomy.php:2222:			$wpdb->query( $wpdb->prepare("DELETE FROM $wpdb->term_relationships WHERE object_id = %d AND term_taxonomy_id IN ($in_delete_terms)", $object_id) );
+wp-includes/taxonomy.php:2235:				$values[] = $wpdb->prepare( "(%d, %d, %d)", $object_id, $tt_id, ++$term_order);
+wp-includes/taxonomy.php:2237:			if ( false === $wpdb->query( "INSERT INTO $wpdb->term_relationships (object_id, term_taxonomy_id, term_order) VALUES " . join( ',', $values ) . " ON DUPLICATE KEY UPDATE term_order = VALUES(term_order)" ) )
+wp-includes/taxonomy.php:2238:				return new WP_Error( 'db_insert_error', __( 'Could not insert term relationship into the database' ), $wpdb->last_error );
+wp-includes/taxonomy.php:2265: * @uses $wpdb
+wp-includes/taxonomy.php:2272:	global $wpdb;
+wp-includes/taxonomy.php:2301:	if ( $wpdb->get_var( $query ) ) {
+wp-includes/taxonomy.php:2339: * @uses $wpdb
+wp-includes/taxonomy.php:2350:	global $wpdb;
+wp-includes/taxonomy.php:2396:			$wpdb->update( $wpdb->terms, compact('term_group'), array( 'term_id' => $alias->term_id ) );
+wp-includes/taxonomy.php:2415:	$wpdb->update($wpdb->terms, compact( 'name', 'slug', 'term_group' ), compact( 'term_id' ) );
+wp-includes/taxonomy.php:2418:		$wpdb->update( $wpdb->terms, compact( 'slug' ), compact( 'term_id' ) );
+wp-includes/taxonomy.php:2424:	$wpdb->update( $wpdb->term_taxonomy, compact( 'term_id', 'taxonomy', 'description', 'parent' ), array( 'term_taxonomy_id' => $tt_id ) );
+wp-includes/taxonomy.php:2473: * @uses $wpdb
+wp-includes/taxonomy.php:2515:	global $wpdb;
+wp-includes/taxonomy.php:2584: * @uses $wpdb
+wp-includes/taxonomy.php:2591:	global $wpdb;
+wp-includes/taxonomy.php:2847: * @uses $wpdb
+wp-includes/taxonomy.php:2854:	global $wpdb;
+wp-includes/taxonomy.php:2913: * @uses $wpdb
+wp-includes/taxonomy.php:2919:	global $wpdb;
+wp-includes/taxonomy.php:2947:		$wpdb->update( $wpdb->term_taxonomy, compact( 'count' ), array( 'term_taxonomy_id' => $term ) );
+wp-includes/taxonomy.php:2960: * @uses $wpdb
+wp-includes/taxonomy.php:2966:	global $wpdb;
+wp-includes/taxonomy.php:2972:		$wpdb->update( $wpdb->term_taxonomy, compact( 'count' ), array( 'term_taxonomy_id' => $term ) );
+wp-includes/wp-db.php:41: * by setting the $wpdb global variable in wp-content/db.php
+wp-includes/wp-db.php:42: * file to your class. The wpdb class will still be included,
+wp-includes/wp-db.php:45: * @link http://codex.wordpress.org/Function_Reference/wpdb_Class
+wp-includes/wp-db.php:51:class wpdb {
+wp-includes/wp-db.php:205:	 * @see wpdb::tables()
+wp-includes/wp-db.php:218:	 * @see wpdb::tables()
+wp-includes/wp-db.php:228:	 * @see wpdb::tables()
+wp-includes/wp-db.php:238:	 * @see wpdb::tables()
+wp-includes/wp-db.php:416:	 * @see wpdb::prepare()
+wp-includes/wp-db.php:417:	 * @see wpdb::insert()
+wp-includes/wp-db.php:418:	 * @see wpdb::update()
+wp-includes/wp-db.php:419:	 * @see wpdb::delete()
+wp-includes/wp-db.php:420:	 * @see wp_set_wpdb_vars()
+wp-includes/wp-db.php:510:	 * Set in WPDB::db_connect() to true, by default. This is used when checking
+wp-includes/wp-db.php:555:	 * @see wpdb::__construct()
+wp-includes/wp-db.php:667:	 * @param bool $set_table_names Optional. Whether the table names, e.g. wpdb::$posts, should be updated or not.
+wp-includes/wp-db.php:765:	 * @uses wpdb::$tables
+wp-includes/wp-db.php:766:	 * @uses wpdb::$old_tables
+wp-includes/wp-db.php:767:	 * @uses wpdb::$global_tables
+wp-includes/wp-db.php:768:	 * @uses wpdb::$ms_global_tables
+wp-includes/wp-db.php:774:	 * @param int $blog_id Optional. The blog_id to prefix. Defaults to wpdb::$blogid. Used only when prefix is requested.
+wp-includes/wp-db.php:893:	 * @uses wpdb::_escape()
+wp-includes/wp-db.php:894:	 * @uses wpdb::_real_escape()
+wp-includes/wp-db.php:943:	 * @uses wpdb::_real_escape()
+wp-includes/wp-db.php:995:			_doing_it_wrong( 'wpdb::prepare', 'wpdb::prepare() requires at least two arguments.', '3.5' );
+wp-includes/wp-db.php:1054:			<p class='wpdberror'><strong>WordPress database error:</strong> [$str]<br />
+wp-includes/wp-db.php:1064:	 * wpdb::hide_errors() should be used instead for hiding of errors. However,
+wp-includes/wp-db.php:1069:	 * @see wpdb::hide_errors()
+wp-includes/wp-db.php:1086:	 * @see wpdb::show_errors()
+wp-includes/wp-db.php:1103:	 * @see wpdb::hide_errors()
+wp-includes/wp-db.php:1240:	 * wpdb::insert( 'table', array( 'column' => 'foo', 'field' => 'bar' ) )
+wp-includes/wp-db.php:1241:	 * wpdb::insert( 'table', array( 'column' => 'foo', 'field' => 1337 ), array( '%s', '%d' ) )
+wp-includes/wp-db.php:1245:	 * @see wpdb::prepare()
+wp-includes/wp-db.php:1246:	 * @see wpdb::$field_types
+wp-includes/wp-db.php:1247:	 * @see wp_set_wpdb_vars()
+wp-includes/wp-db.php:1252:	 * 	A format is one of '%d', '%f', '%s' (integer, float, string). If omitted, all values in $data will be treated as strings unless otherwise specified in wpdb::$field_types.
+wp-includes/wp-db.php:1263:	 * wpdb::replace( 'table', array( 'column' => 'foo', 'field' => 'bar' ) )
+wp-includes/wp-db.php:1264:	 * wpdb::replace( 'table', array( 'column' => 'foo', 'field' => 1337 ), array( '%s', '%d' ) )
+wp-includes/wp-db.php:1268:	 * @see wpdb::prepare()
+wp-includes/wp-db.php:1269:	 * @see wpdb::$field_types
+wp-includes/wp-db.php:1270:	 * @see wp_set_wpdb_vars()
+wp-includes/wp-db.php:1275:	 * 	A format is one of '%d', '%f', '%s' (integer, float, string). If omitted, all values in $data will be treated as strings unless otherwise specified in wpdb::$field_types.
+wp-includes/wp-db.php:1289:	 * @see wpdb::prepare()
+wp-includes/wp-db.php:1290:	 * @see wpdb::$field_types
+wp-includes/wp-db.php:1291:	 * @see wp_set_wpdb_vars()
+wp-includes/wp-db.php:1296:	 * 	A format is one of '%d', '%f', '%s' (integer, float, string). If omitted, all values in $data will be treated as strings unless otherwise specified in wpdb::$field_types.
+wp-includes/wp-db.php:1323:	 * wpdb::update( 'table', array( 'column' => 'foo', 'field' => 'bar' ), array( 'ID' => 1 ) )
+wp-includes/wp-db.php:1324:	 * wpdb::update( 'table', array( 'column' => 'foo', 'field' => 1337 ), array( 'ID' => 1 ), array( '%s', '%d' ), array( '%d' ) )
+wp-includes/wp-db.php:1328:	 * @see wpdb::prepare()
+wp-includes/wp-db.php:1329:	 * @see wpdb::$field_types
+wp-includes/wp-db.php:1330:	 * @see wp_set_wpdb_vars()
+wp-includes/wp-db.php:1336:	 * 	A format is one of '%d', '%f', '%s' (integer, float, string). If omitted, all values in $data will be treated as strings unless otherwise specified in wpdb::$field_types.
+wp-includes/wp-db.php:1375:	 * wpdb::delete( 'table', array( 'ID' => 1 ) )
+wp-includes/wp-db.php:1376:	 * wpdb::delete( 'table', array( 'ID' => 1 ), array( '%d' ) )
+wp-includes/wp-db.php:1380:	 * @see wpdb::prepare()
+wp-includes/wp-db.php:1381:	 * @see wpdb::$field_types
+wp-includes/wp-db.php:1382:	 * @see wp_set_wpdb_vars()
+wp-includes/wp-db.php:1386:	 * @param array|string $where_format Optional. An array of formats to be mapped to each of the values in $where. If string, that format will be used for all of the items in $where. A format is one of '%d', '%f', '%s' (integer, float, string). If omitted, all values in $where will be treated as strings unless otherwise specified in wpdb::$field_types.
+wp-includes/wp-db.php:1623:	 * Will not die if wpdb::$show_errors is false.
+wp-includes/wp-db.php:1665:	 * @deprecated Use wpdb::has_cap( 'collation' )
+wp-includes/wp-db.php:1670:		_deprecated_function( __FUNCTION__, '3.5', 'wpdb::has_cap( \'collation\' )' );
+wp-includes/wp-db.php:1696:	 * @see   wpdb::db_version()
+wp-includes/wp-db.php:1717:	 * Retrieve the name of the function that called wpdb.
+wp-includes/comment-template.php:840: * @uses $wpdb
+wp-includes/comment-template.php:849:	global $wp_query, $withcomments, $post, $wpdb, $id, $comment, $user_login, $user_ID, $user_identity, $overridden_cpage;
+wp-includes/template.php:401:	global $posts, $post, $wp_did_header, $wp_query, $wp_rewrite, $wpdb, $wp_version, $wp, $id, $comment, $user_ID;
+wp-includes/canonical.php:40:	global $wp_rewrite, $is_IIS, $wp_query, $wpdb;
+wp-includes/canonical.php:469: * @uses $wpdb
+wp-includes/canonical.php:474:	global $wpdb, $wp_rewrite;
+wp-includes/canonical.php:477:		$where = $wpdb->prepare("post_name LIKE %s", like_escape( get_query_var('name') ) . '%');
+wp-includes/canonical.php:481:			$where .= $wpdb->prepare(" AND post_type = %s", get_query_var('post_type'));
+wp-includes/canonical.php:486:			$where .= $wpdb->prepare(" AND YEAR(post_date) = %d", get_query_var('year'));
+wp-includes/canonical.php:488:			$where .= $wpdb->prepare(" AND MONTH(post_date) = %d", get_query_var('monthnum'));
+wp-includes/canonical.php:490:			$where .= $wpdb->prepare(" AND DAYOFMONTH(post_date) = %d", get_query_var('day'));
+wp-includes/formatting.php:2550: * This is just a handy shortcut for $wpdb->escape(), for completeness' sake
+wp-includes/formatting.php:2557:	global $wpdb;
+wp-includes/formatting.php:2558:	return $wpdb->escape( $sql );
+wp-includes/comment.php:28: * @uses $wpdb
+wp-includes/comment.php:42:	global $wpdb;
+wp-includes/comment.php:103: * @uses $wpdb
+wp-includes/comment.php:109:	global $wpdb;
+wp-includes/comment.php:124: * @uses $wpdb
+wp-includes/comment.php:131:	global $wpdb;
+wp-includes/comment.php:177: * @uses $wpdb
+wp-includes/comment.php:211:		global $wpdb;
+wp-includes/comment.php:267:			$approved = $wpdb->prepare( "comment_approved = %s", $status );
+wp-includes/comment.php:300:					$ordersby[ $key ] = "$wpdb->commentmeta.meta_value";
+wp-includes/comment.php:302:					$ordersby[ $key ] = "$wpdb->commentmeta.meta_value+0";
+wp-includes/comment.php:331:			$where .= $wpdb->prepare( ' AND comment_post_ID = %d', $post_id );
+wp-includes/comment.php:333:			$where .= $wpdb->prepare( ' AND comment_author_email = %s', $author_email );
+wp-includes/comment.php:335:			$where .= $wpdb->prepare( ' AND comment_karma = %d', $karma );
+wp-includes/comment.php:341:			$where .= $wpdb->prepare( ' AND comment_type = %s', $type );
+wp-includes/comment.php:344:			$where .= $wpdb->prepare( ' AND comment_parent = %d', $parent );
+wp-includes/comment.php:346:			$where .= $wpdb->prepare( ' AND user_id = %d', $user_id );
+wp-includes/comment.php:352:			$join = "JOIN $wpdb->posts ON $wpdb->posts.ID = $wpdb->comments.comment_post_ID";
+wp-includes/comment.php:354:				$where .= $wpdb->prepare( " AND {$wpdb->posts}.{$field_name} = %s", $field_value );
+wp-includes/comment.php:358:			$clauses = $this->meta_query->get_sql( 'comment', $wpdb->comments, 'comment_ID', $this );
+wp-includes/comment.php:361:			$groupby = "{$wpdb->comments}.comment_ID";
+wp-includes/comment.php:375:			return $wpdb->get_var( $query );
+wp-includes/comment.php:377:		$comments = $wpdb->get_results( $query );
+wp-includes/comment.php:434: * @uses $wpdb
+wp-includes/comment.php:441:	global $wpdb;
+wp-includes/comment.php:474: * @uses $wpdb
+wp-includes/comment.php:480:	global $wpdb;
+wp-includes/comment.php:486:		$where = $wpdb->prepare("WHERE comment_post_ID = %d", $post_id);
+wp-includes/comment.php:489:	$totals = (array) $wpdb->get_results("
+wp-includes/comment.php:491:		FROM {$wpdb->comments}
+wp-includes/comment.php:658: * @uses $wpdb
+wp-includes/comment.php:667:	global $wpdb;
+wp-includes/comment.php:676:	if ( $wpdb->get_var($dupe) ) {
+wp-includes/comment.php:715: * @uses $wpdb
+wp-includes/comment.php:726:	global $wpdb;
+wp-includes/comment.php:826:	global $wpdb;
+wp-includes/comment.php:936:	global $wpdb;
+wp-includes/comment.php:951:		$where = $wpdb->prepare( "WHERE comment_post_ID = %d", $post_id );
+wp-includes/comment.php:987: * @uses $wpdb
+wp-includes/comment.php:998:	global $wpdb;
+wp-includes/comment.php:1010:		$wpdb->update($wpdb->comments, array('comment_parent' => $comment->comment_parent), array('comment_parent' => $comment_id));
+wp-includes/comment.php:1019:	if ( ! $wpdb->delete( $wpdb->comments, array( 'comment_ID' => $comment_id ) ) )
+wp-includes/comment.php:1256: * @uses $wpdb
+wp-includes/comment.php:1262:	global $wpdb;
+wp-includes/comment.php:1283:	$wpdb->insert($wpdb->comments, $data);
+wp-includes/comment.php:1285:	$id = (int) $wpdb->insert_id;
+wp-includes/comment.php:1432:	global $wpdb;
+wp-includes/comment.php:1460:	if ( !$wpdb->update( $wpdb->comments, array('comment_approved' => $status), array('comment_ID' => $comment_id) ) ) {
+wp-includes/comment.php:1462:			return new WP_Error('db_update_error', __('Could not update comment status'), $wpdb->last_error);
+wp-includes/comment.php:1485: * @uses $wpdb
+wp-includes/comment.php:1492:	global $wpdb;
+wp-includes/comment.php:1522:	$rval = $wpdb->update( $wpdb->comments, $data, compact( 'comment_ID' ) );
+wp-includes/comment.php:1602: * @uses $wpdb
+wp-includes/comment.php:1610:	global $wpdb;
+wp-includes/comment.php:1619:	$wpdb->update( $wpdb->posts, array('comment_count' => $new), array('ID' => $post_id) );
+wp-includes/comment.php:1708: * @uses $wpdb
+wp-includes/comment.php:1711:	global $wpdb;
+wp-includes/comment.php:1739: * @uses $wpdb
+wp-includes/comment.php:1744:	global $wpdb;
+wp-includes/comment.php:1750:		$wpdb->update($wpdb->posts, array('to_ping' => ''), array('ID' => $post_id) );
+wp-includes/comment.php:1771:				$wpdb->query( $wpdb->prepare("UPDATE $wpdb->posts SET to_ping = TRIM(REPLACE(to_ping, %s, '')) WHERE ID = %d", $tb_ping, $post_id) );
+wp-includes/comment.php:1895: * @uses $wpdb
+wp-includes/comment.php:1904:	global $wpdb;
+wp-includes/comment.php:1923:	$wpdb->query( $wpdb->prepare("UPDATE $wpdb->posts SET pinged = CONCAT(pinged, '\n', %s) WHERE ID = %d", $trackback_url, $ID) );
+wp-includes/comment.php:1924:	return $wpdb->query( $wpdb->prepare("UPDATE $wpdb->posts SET to_ping = TRIM(REPLACE(to_ping, %s, '')) WHERE ID = %d", $trackback_url, $ID) );
+wp-includes/link-template.php:1123:	global $wpdb;
+wp-includes/link-template.php:1133:		$join = " INNER JOIN $wpdb->term_relationships AS tr ON p.ID = tr.object_id INNER JOIN $wpdb->term_taxonomy tt ON tr.term_taxonomy_id = tt.term_taxonomy_id";
+wp-includes/link-template.php:1174:	$where = apply_filters( "get_{$adjacent}_post_where", $wpdb->prepare("WHERE p.post_date $op %s AND p.post_type = %s AND p.post_status = 'publish' $posts_in_ex_cats_sql", $current_post_date, $post->post_type), $in_same_cat, $excluded_categories );
+wp-includes/link-template.php:1186:	$result = $wpdb->get_var( $query );
+wp-includes/user.php:147: * @uses $wpdb WordPress database object for queries.
+wp-includes/user.php:153:	global $wpdb;
+wp-includes/user.php:173:	global $wpdb;
+wp-includes/user.php:224: * @uses $wpdb WordPress database object for queries.
+wp-includes/user.php:234:	global $wpdb;
+wp-includes/user.php:245:	if ( $user->has_prop( $wpdb->prefix . $option ) ) // Blog specific
+wp-includes/user.php:246:		$result = $user->get( $wpdb->prefix . $option );
+wp-includes/user.php:265: * @uses $wpdb WordPress database object for queries
+wp-includes/user.php:274:	global $wpdb;
+wp-includes/user.php:277:		$option_name = $wpdb->prefix . $option_name;
+wp-includes/user.php:295: * @uses $wpdb WordPress database object for queries
+wp-includes/user.php:303:	global $wpdb;
+wp-includes/user.php:306:		$option_name = $wpdb->prefix . $option_name;
+wp-includes/user.php:392:		global $wpdb;
+wp-includes/user.php:401:				$this->query_fields[] = $wpdb->users . '.' . esc_sql( $field );
+wp-includes/user.php:404:			$this->query_fields = "$wpdb->users.*";
+wp-includes/user.php:406:			$this->query_fields = "$wpdb->users.ID";
+wp-includes/user.php:412:		$this->query_from = "FROM $wpdb->users";
+wp-includes/user.php:427:				FROM $wpdb->posts
+wp-includes/user.php:430:			) p ON ({$wpdb->users}.ID = p.post_author)
+wp-includes/user.php:449:				$this->query_limit = $wpdb->prepare("LIMIT %d, %d", $qv['offset'], $qv['number']);
+wp-includes/user.php:451:				$this->query_limit = $wpdb->prepare("LIMIT %d", $qv['number']);
+wp-includes/user.php:489:			$qv['meta_key'] = $wpdb->get_blog_prefix( $blog_id ) . 'user_level';
+wp-includes/user.php:499:			$cap_meta_query['key'] = $wpdb->get_blog_prefix( $blog_id ) . 'capabilities';
+wp-includes/user.php:513:			$clauses = $meta_query->get_sql( 'user', $wpdb->users, 'ID', $this );
+wp-includes/user.php:523:			$this->query_where .= " AND $wpdb->users.ID IN ($ids)";
+wp-includes/user.php:526:			$this->query_where .= " AND $wpdb->users.ID NOT IN ($ids)";
+wp-includes/user.php:539:		global $wpdb;
+wp-includes/user.php:656: * @uses $wpdb
+wp-includes/user.php:682:	global $wpdb;
+wp-includes/user.php:711:	if ( isset( $keys[ $wpdb->base_prefix . 'capabilities' ] ) && defined( 'MULTISITE' ) ) {
+wp-includes/user.php:726:		unset( $keys[ $wpdb->base_prefix . 'capabilities' ] );
+wp-includes/user.php:734:		if ( $wpdb->base_prefix && 0 !== strpos( $key, $wpdb->base_prefix ) )
+wp-includes/user.php:736:		$blog_id = str_replace( array( $wpdb->base_prefix, '_capabilities' ), '', $key );
+wp-includes/user.php:875:	global $wpdb, $wp_roles;
+wp-includes/user.php:879:	$blog_prefix = $wpdb->get_blog_prefix($id);
+wp-includes/user.php:1014: * @uses $wpdb WordPress database object for queries
+wp-includes/user.php:1209: * @uses $wpdb
+wp-includes/user.php:1274: * @uses $wpdb WordPress database layer.
+wp-includes/user.php:1283:	global $wpdb;
+wp-includes/user.php:1396:		$wpdb->update( $wpdb->users, $data, compact( 'ID' ) );
+wp-includes/user.php:1399:		$wpdb->insert( $wpdb->users, $data + compact( 'user_login' ) );
+wp-includes/user.php:1400:		$user_id = (int) $wpdb->insert_id;
+wp-includes/option.php:33:	global $wpdb;
+wp-includes/option.php:75:		$suppress = $wpdb->suppress_errors();
+wp-includes/option.php:77:		$wpdb->suppress_errors( $suppress );
+wp-includes/option.php:136:	global $wpdb;
+wp-includes/option.php:144:		$suppress = $wpdb->suppress_errors();
+wp-includes/option.php:147:		$wpdb->suppress_errors($suppress);
+wp-includes/option.php:169:	global $wpdb, $_wp_using_ext_object_cache;
+wp-includes/option.php:175:		$site_id = $wpdb->siteid;
+wp-includes/option.php:216:	global $wpdb;
+wp-includes/option.php:258:	$result = $wpdb->update( $wpdb->options, array( 'option_value' => $newvalue ), array( 'option_name' => $option ) );
+wp-includes/option.php:294:	global $wpdb;
+wp-includes/option.php:337:	$result = $wpdb->query( $wpdb->prepare( "INSERT INTO `$wpdb->options` (`option_name`, `option_value`, `autoload`) VALUES (%s, %s, %s) ON DUPLICATE KEY UPDATE `option_name` = VALUES(`option_name`), `option_value` = VALUES(`option_value`), `autoload` = VALUES(`autoload`)", $option, $value, $autoload ) );
+wp-includes/option.php:361:	global $wpdb;
+wp-includes/option.php:370:	$result = $wpdb->delete( $wpdb->options, array( 'option_name' => $option ) );
+wp-includes/option.php:760:	global $wpdb;
+wp-includes/option.php:771:		$cache_key = "{$wpdb->siteid}:$option";
+wp-includes/option.php:811:	global $wpdb;
+wp-includes/option.php:818:		$cache_key = "{$wpdb->siteid}:$option";
+wp-includes/option.php:828:		$result = $wpdb->insert( $wpdb->sitemeta, array('site_id' => $wpdb->siteid, 'meta_key' => $option, 'meta_value' => $value ) );
+wp-includes/option.php:856:	global $wpdb;
+wp-includes/option.php:868:		$cache_key = "{$wpdb->siteid}:$option";
+wp-includes/option.php:871:		$result = $wpdb->delete( $wpdb->sitemeta, array( 'meta_key' => $option, 'site_id' => $wpdb->siteid ) );
+wp-includes/option.php:899:	global $wpdb;
+wp-includes/option.php:914:		$cache_key = "{$wpdb->siteid}:$option";
+wp-includes/option.php:919:		$result = $wpdb->update( $wpdb->sitemeta, array( 'meta_value' => $value ), array( 'site_id' => $wpdb->siteid, 'meta_key' => $option ) );
+wp-includes/ms-blogs.php:17:	global $wpdb;
+wp-includes/ms-blogs.php:19:	update_blog_details( $wpdb->blogid, array('last_updated' => current_time('mysql', true)) );
+wp-includes/ms-blogs.php:21:	do_action( 'wpmu_blog_updated', $wpdb->blogid );
+wp-includes/ms-blogs.php:95:	global $wpdb, $current_site;
+wp-includes/ms-blogs.php:126:	global $wpdb;
+wp-includes/ms-blogs.php:273:	global $wpdb;
+wp-includes/ms-blogs.php:295:	$result = $wpdb->update( $wpdb->blogs, $update_details, array('blog_id' => $blog_id) );
+wp-includes/ms-blogs.php:502:	global $wpdb, $wp_roles;
+wp-includes/ms-blogs.php:518:	$wpdb->set_blog_id( $new_blog );
+wp-includes/ms-blogs.php:519:	$GLOBALS['table_prefix'] = $wpdb->prefix;
+wp-includes/ms-blogs.php:565:	global $wpdb, $wp_roles;
+wp-includes/ms-blogs.php:579:	$wpdb->set_blog_id( $blog );
+wp-includes/ms-blogs.php:582:	$GLOBALS['table_prefix'] = $wpdb->prefix;
+wp-includes/ms-blogs.php:667:	global $wpdb;
+wp-includes/ms-blogs.php:675:	$result = $wpdb->update( $wpdb->blogs, array($pref => $value, 'last_updated' => current_time('mysql', true)), array('blog_id' => $blog_id) );
+wp-includes/ms-blogs.php:704:	global $wpdb;
+wp-includes/ms-blogs.php:724:	global $wpdb;
+wp-includes/class-wp-xmlrpc-server.php:222:		global $wpdb;
+wp-includes/class-wp-xmlrpc-server.php:225:			return($wpdb->escape($array));
+wp-includes/class-wp-xmlrpc-server.php:233:					$array[$k] = $wpdb->escape($v);
+wp-includes/class-wp-xmlrpc-server.php:2454:		global $wpdb;
+wp-includes/class-wp-xmlrpc-server.php:2471:		$page_list = $wpdb->get_results("
+wp-includes/class-wp-xmlrpc-server.php:2478:			FROM {$wpdb->posts}
+wp-includes/class-wp-xmlrpc-server.php:2943:		global $wpdb;
+wp-includes/class-wp-xmlrpc-server.php:2981:			$comment['comment_author'] = $wpdb->escape( $user->display_name );
+wp-includes/class-wp-xmlrpc-server.php:2982:			$comment['comment_author_email'] = $wpdb->escape( $user->user_email );
+wp-includes/class-wp-xmlrpc-server.php:2983:			$comment['comment_author_url'] = $wpdb->escape( $user->user_url );
+wp-includes/class-wp-xmlrpc-server.php:4332:		global $wpdb;
+wp-includes/class-wp-xmlrpc-server.php:4339:					$wpdb->update($wpdb->posts, array('post_parent' => $post_ID), array('ID' => $file->ID) );
+wp-includes/class-wp-xmlrpc-server.php:4908:		global $wpdb;
+wp-includes/class-wp-xmlrpc-server.php:4911:		$username  = $wpdb->escape($args[1]);
+wp-includes/class-wp-xmlrpc-server.php:4912:		$password   = $wpdb->escape($args[2]);
+wp-includes/class-wp-xmlrpc-server.php:4934:			$old_file = $wpdb->get_row("
+wp-includes/class-wp-xmlrpc-server.php:4936:				FROM {$wpdb->posts}
+wp-includes/class-wp-xmlrpc-server.php:5212:		global $wpdb;
+wp-includes/class-wp-xmlrpc-server.php:5297:		global $wpdb;
+wp-includes/class-wp-xmlrpc-server.php:5351:				if (! ($post_ID = $wpdb->get_var($sql)) ) {
+wp-includes/class-wp-xmlrpc-server.php:5438:		$pagelinkedfrom = $wpdb->escape( $pagelinkedfrom );
+wp-includes/class-wp-xmlrpc-server.php:5469:		global $wpdb;
+wp-includes/post.php:378: * @uses $wpdb
+wp-includes/post.php:571:		global $wpdb;
+wp-includes/post.php:1656: * @uses $wpdb
+wp-includes/post.php:1664:	global $wpdb;
+wp-includes/post.php:1667:	$return = $wpdb->update( $wpdb->posts, array('post_type' => $post_type), array('ID' => $post_id) );
+wp-includes/post.php:1692: * @uses $wpdb
+wp-includes/post.php:1741: * @uses $wpdb
+wp-includes/post.php:1766: * @uses $wpdb
+wp-includes/post.php:1786: * @uses $wpdb
+wp-includes/post.php:1808: * @uses $wpdb
+wp-includes/post.php:1829: * @uses $wpdb
+wp-includes/post.php:2122:	global $wpdb;
+wp-includes/post.php:2142:	$count = $wpdb->get_results( $wpdb->prepare( $query, $type ), ARRAY_A );
+wp-includes/post.php:2171:	global $wpdb;
+wp-includes/post.php:2306:	global $wpdb;
+wp-includes/post.php:2330:		$children = $wpdb->get_results( $children_query );
+wp-includes/post.php:2332:		$wpdb->update( $wpdb->posts, $parent_data, $parent_where + array( 'post_type' => $post->post_type ) );
+wp-includes/post.php:2356:	$wpdb->update( $wpdb->posts, $parent_data, $parent_where + array( 'post_type' => 'attachment' ) );
+wp-includes/post.php:2367:	$wpdb->delete( $wpdb->posts, array( 'ID' => $postid ) );
+wp-includes/post.php:2468:	global $wpdb;
+wp-includes/post.php:2489:	$result = $wpdb->update($wpdb->comments, array('comment_approved' => 'post-trashed'), array('comment_post_ID' => $post_id));
+wp-includes/post.php:2509:	global $wpdb;
+wp-includes/post.php:2534:		$wpdb->query( "UPDATE $wpdb->comments SET comment_approved = '$status' WHERE comment_ID IN ('" . $comments_in . "')" );
+wp-includes/post.php:2688: * @uses $wpdb
+wp-includes/post.php:2701:	global $wpdb, $user_ID;
+wp-includes/post.php:2870:		if ( false === $wpdb->update( $wpdb->posts, $data, $where ) ) {
+wp-includes/post.php:2872:				return new WP_Error('db_update_error', __('Could not update post in the database'), $wpdb->last_error);
+wp-includes/post.php:2886:		if ( false === $wpdb->insert( $wpdb->posts, $data ) ) {
+wp-includes/post.php:2888:				return new WP_Error('db_insert_error', __('Could not insert post into the database'), $wpdb->last_error);
+wp-includes/post.php:2892:		$post_ID = (int) $wpdb->insert_id;
+wp-includes/post.php:2900:		$wpdb->update( $wpdb->posts, array( 'post_name' => $data['post_name'] ), $where );
+wp-includes/post.php:2924:		$wpdb->update( $wpdb->posts, array( 'guid' => get_permalink( $post_ID ) ), $where );
+wp-includes/post.php:3013: * @uses $wpdb
+wp-includes/post.php:3019:	global $wpdb;
+wp-includes/post.php:3027:	$wpdb->update( $wpdb->posts, array( 'post_status' => 'publish' ), array( 'ID' => $post->ID ) );
+wp-includes/post.php:3077: * @global wpdb $wpdb
+wp-includes/post.php:3090:	global $wpdb, $wp_rewrite;
+wp-includes/post.php:3102:		$post_name_check = $wpdb->get_var( $wpdb->prepare( $check_sql, $slug, $post_ID ) );
+wp-includes/post.php:3108:				$post_name_check = $wpdb->get_var( $wpdb->prepare($check_sql, $alt_post_name, $post_ID ) );
+wp-includes/post.php:3119:		$post_name_check = $wpdb->get_var( $wpdb->prepare( $check_sql, $slug, $post_ID, $post_parent ) );
+wp-includes/post.php:3125:				$post_name_check = $wpdb->get_var( $wpdb->prepare( $check_sql, $alt_post_name, $post_ID, $post_parent ) );
+wp-includes/post.php:3133:		$post_name_check = $wpdb->get_var( $wpdb->prepare( $check_sql, $slug, $post_type, $post_ID ) );
+wp-includes/post.php:3139:				$post_name_check = $wpdb->get_var( $wpdb->prepare( $check_sql, $alt_post_name, $post_type, $post_ID ) );
+wp-includes/post.php:3287: * @uses $wpdb
+wp-includes/post.php:3294:	global $wpdb;
+wp-includes/post.php:3303:	return $wpdb->update( $wpdb->posts, array( 'pinged' => $new ), array( 'ID' => $post_id ) );
+wp-includes/post.php:3310: * @uses $wpdb
+wp-includes/post.php:3337: * @uses $wpdb
+wp-includes/post.php:3343:	global $wpdb;
+wp-includes/post.php:3355: * @uses $wpdb
+wp-includes/post.php:3361:	global $wpdb;
+wp-includes/post.php:3408: * @uses $wpdb
+wp-includes/post.php:3413:	global $wpdb;
+wp-includes/post.php:3445: * @uses $wpdb
+wp-includes/post.php:3453:	global $wpdb;
+wp-includes/post.php:3464:	$wpdb->escape_by_ref( $post_type_sql );
+wp-includes/post.php:3500: * @uses $wpdb
+wp-includes/post.php:3508:	global $wpdb;
+wp-includes/post.php:3616: * @uses $wpdb
+wp-includes/post.php:3622:	global $wpdb;
+wp-includes/post.php:3678:					$inclusions = $wpdb->prepare(' AND ( ID = %d ', $incpage);
+wp-includes/post.php:3680:					$inclusions .= $wpdb->prepare(' OR ID = %d ', $incpage);
+wp-includes/post.php:3693:					$exclusions = $wpdb->prepare(' AND ( ID <> %d ', $expage);
+wp-includes/post.php:3695:					$exclusions .= $wpdb->prepare(' AND ID <> %d ', $expage);
+wp-includes/post.php:3719:					$author_query = $wpdb->prepare(' post_author = %d ', $post_author);
+wp-includes/post.php:3721:					$author_query .= $wpdb->prepare(' OR post_author = %d ', $post_author);
+wp-includes/post.php:3731:		$join = " LEFT JOIN $wpdb->postmeta ON ( $wpdb->posts.ID = $wpdb->postmeta.post_id )";
+wp-includes/post.php:3737:			$where .= $wpdb->prepare(" AND $wpdb->postmeta.meta_key = %s", $meta_key);
+wp-includes/post.php:3739:			$where .= $wpdb->prepare(" AND $wpdb->postmeta.meta_value = %s", $meta_value);
+wp-includes/post.php:3744:		$where .= $wpdb->prepare(' AND post_parent = %d ', $parent);
+wp-includes/post.php:3747:		$where_post_type = $wpdb->prepare( "post_type = %s AND post_status = %s", $post_type, array_shift( $post_status ) );
+wp-includes/post.php:3750:		$where_post_type = $wpdb->prepare( "post_type = %s AND post_status IN ('$post_status')", $post_type );
+wp-includes/post.php:3766:				$orderby = "$wpdb->posts.ID";
+wp-includes/post.php:3772:				$orderby = "$wpdb->posts.comment_count";
+wp-includes/post.php:3776:					$orderby = "$wpdb->posts." . $orderby;
+wp-includes/post.php:3778:					$orderby = "$wpdb->posts.post_" . $orderby;
+wp-includes/post.php:3784:	$sort_column = ! empty( $orderby_array ) ? implode( ',', $orderby_array ) : "$wpdb->posts.post_title";
+wp-includes/post.php:3797:	$pages = $wpdb->get_results($query);
+wp-includes/post.php:3897: * @uses $wpdb
+wp-includes/post.php:3908:	global $wpdb, $user_ID;
+wp-includes/post.php:4005:		$wpdb->update( $wpdb->posts, $data, array( 'ID' => $post_ID ) );
+wp-includes/post.php:4015:		$wpdb->insert( $wpdb->posts, $data );
+wp-includes/post.php:4016:		$post_ID = (int) $wpdb->insert_id;
+wp-includes/post.php:4021:		$wpdb->update( $wpdb->posts, compact("post_name"), array( 'ID' => $post_ID ) );
+wp-includes/post.php:4069: * @uses $wpdb
+wp-includes/post.php:4077:	global $wpdb;
+wp-includes/post.php:4120:	$wpdb->delete( $wpdb->posts, array( 'ID' => $post_id ) );
+wp-includes/post.php:4473:	global $user_ID, $wpdb;
+wp-includes/post.php:4486:			$sql = $wpdb->prepare( 'WHERE post_type = %s AND ', $post_type );
+wp-includes/post.php:4488:			$sql = $wpdb->prepare( 'WHERE post_author = %d AND post_type = %s AND ', $post_author, $post_type );
+wp-includes/post.php:4569:	global $wpdb;
+wp-includes/post.php:4584:		array_walk( $post_types, array( &$wpdb, 'escape_by_ref' ) );
+wp-includes/post.php:4641:	global $_wp_suspend_cache_invalidation, $wpdb;
+wp-includes/post.php:4675: * @uses $wpdb
+wp-includes/post.php:4730: * @uses $wpdb
+wp-includes/post.php:4783: * @uses $wpdb
+wp-includes/post.php:4792:	global $wpdb;
+wp-includes/post.php:4797:			$wpdb->update( $wpdb->posts, array( 'guid' => get_permalink( $post->ID ) ), array( 'ID' => $post->ID ) );
+wp-includes/post.php:4836: * @uses $wpdb
+wp-includes/post.php:4843:	global $wpdb;
+wp-includes/post.php:5424:	global $wpdb;
+wp-includes/post.php:5553:	global $wpdb;
+wp-includes/load.php:320: * wp-admin/setup-config.php. We must globalize $wpdb to ensure that it is
+wp-includes/load.php:324: * @global $wpdb WordPress Database Object
+wp-includes/load.php:327:	global $wpdb;
+wp-includes/load.php:333:	if ( isset( $wpdb ) )
+wp-includes/load.php:336:	$wpdb = new wpdb( DB_USER, DB_PASSWORD, DB_NAME, DB_HOST );
+wp-includes/load.php:344: * @see wpdb::$field_types Since 2.8.0
+wp-includes/load.php:345: * @see wpdb::prepare()
+wp-includes/load.php:346: * @see wpdb::insert()
+wp-includes/load.php:347: * @see wpdb::update()
+wp-includes/load.php:348: * @see wpdb::set_prefix()
+wp-includes/load.php:353:function wp_set_wpdb_vars() {
+wp-includes/load.php:354:	global $wpdb, $table_prefix;
+wp-includes/load.php:355:	if ( !empty( $wpdb->error ) )
+wp-includes/load.php:358:	$wpdb->field_types = array( 'post_author' => '%d', 'post_parent' => '%d', 'menu_order' => '%d', 'term_id' => '%d', 'term_group' => '%d', 'term_taxonomy_id' => '%d',
+wp-includes/load.php:366:	$prefix = $wpdb->set_prefix( $table_prefix );
+wp-includes/load.php:539:	// Escape with wpdb.
+wp-includes/deprecated.php:1033: * $wpdb->linkcategories and output it as a nested HTML unordered list.
+wp-includes/deprecated.php:2278:	global $wpdb;
+wp-includes/deprecated.php:2293:		$wpdb->query( $wpdb->prepare("DELETE FROM $wpdb->usermeta WHERE user_id = %d AND meta_key = %s AND meta_value = %s", $user_id, $meta_key, $meta_value) );
+wp-includes/deprecated.php:2295:		$wpdb->query( $wpdb->prepare("DELETE FROM $wpdb->usermeta WHERE user_id = %d AND meta_key = %s", $user_id, $meta_key) );
+wp-includes/deprecated.php:2325:	global $wpdb;
+wp-includes/deprecated.php:2379:	global $wpdb;
+wp-includes/deprecated.php:2399:		$wpdb->insert($wpdb->usermeta, compact('user_id', 'meta_key', 'meta_value') );
+wp-includes/deprecated.php:2401:		$wpdb->update($wpdb->usermeta, compact('meta_value'), compact('user_id', 'meta_key') );
+wp-includes/deprecated.php:2409:		do_action( 'added_usermeta', $wpdb->insert_id, $user_id, $meta_key, $meta_value );
+wp-includes/deprecated.php:2424: * @uses $wpdb WordPress database object for queries
+wp-includes/deprecated.php:2433:	global $wpdb, $blog_id;
+wp-includes/deprecated.php:2436:	$blog_prefix = $wpdb->get_blog_prefix($id);
+wp-includes/meta.php:18: * @uses $wpdb WordPress database object for queries.
+wp-includes/meta.php:41:	global $wpdb;
+wp-includes/meta.php:54:	if ( $unique && $wpdb->get_var( $wpdb->prepare(
+wp-includes/meta.php:64:	$result = $wpdb->insert( $table, array(
+wp-includes/meta.php:73:	$mid = (int) $wpdb->insert_id;
+wp-includes/meta.php:87: * @uses $wpdb WordPress database object for queries.
+wp-includes/meta.php:111:	global $wpdb;
+wp-includes/meta.php:154:	$wpdb->update( $table, $data, $where );
+wp-includes/meta.php:170: * @uses $wpdb WordPress database object for queries.
+wp-includes/meta.php:194:	global $wpdb;
+wp-includes/meta.php:212:		$query .= $wpdb->prepare(" AND $type_column = %d", $object_id );
+wp-includes/meta.php:215:		$query .= $wpdb->prepare(" AND meta_value = %s", $meta_value );
+wp-includes/meta.php:217:	$meta_ids = $wpdb->get_col( $query );
+wp-includes/meta.php:232:	$count = $wpdb->query($query);
+wp-includes/meta.php:349:	global $wpdb;
+wp-includes/meta.php:388:	global $wpdb;
+wp-includes/meta.php:438:		$result = (bool) $wpdb->update( $table, $data, $where, '%s', '%d' );
+wp-includes/meta.php:468:	global $wpdb;
+wp-includes/meta.php:495:		$result = (bool) $wpdb->delete( $table, array( $id_column => $meta_id ) );
+wp-includes/meta.php:518: * @uses $wpdb WordPress database object for queries.
+wp-includes/meta.php:533:	global $wpdb;
+wp-includes/meta.php:704:		global $wpdb;
+wp-includes/meta.php:734:				$where["key-only-$key"] = $wpdb->prepare( "$meta_table.meta_key = %s", trim( $q['key'] ) );
+wp-includes/meta.php:781:				$where[$k] = $wpdb->prepare( "$alias.meta_key = %s", $meta_key );
+wp-includes/meta.php:816:			$where[$k] = ' (' . $where[$k] . $wpdb->prepare( "CAST($alias.meta_value AS {$meta_type}) {$meta_compare} {$meta_compare_string})", $meta_value );
+wp-includes/meta.php:838: * @uses $wpdb WordPress database object for queries.
+wp-includes/meta.php:844:	global $wpdb;
+wp-includes/meta.php:848:	if ( empty($wpdb->$table_name) )
+wp-includes/meta.php:851:	return $wpdb->$table_name;
+wp-includes/functions.php:405: * @uses $wpdb
+wp-includes/functions.php:411:	global $wpdb;
+wp-includes/functions.php:968:	global $wpdb;
+wp-includes/functions.php:969:	return $wpdb->num_queries;
+wp-includes/functions.php:1100: * @uses $wpdb
+wp-includes/functions.php:1105:	global $wpdb;
+wp-includes/functions.php:1111:	$suppress = $wpdb->suppress_errors();
+wp-includes/functions.php:1120:	$wpdb->suppress_errors( $suppress );
+wp-includes/functions.php:1132:	$suppress = $wpdb->suppress_errors();
+wp-includes/functions.php:1137:	$wp_tables = $wpdb->tables();
+wp-includes/functions.php:1145:		if ( ! $wpdb->get_results( "DESCRIBE $table;" ) )
+wp-includes/functions.php:1153:		$wpdb->error = sprintf( __( 'One or more database tables are unavailable. The database may need to be <a href="%s">repaired</a>.' ), 'maint/repair.php?referrer=is_blog_installed' );
+wp-includes/functions.php:1157:	$wpdb->suppress_errors( $suppress );
+wp-includes/functions.php:2723: * @uses $wpdb
+wp-includes/functions.php:2726:	global $wpdb;
+wp-includes/functions.php:2736:		wp_die($wpdb->error);
+wp-includes/functions.php:3450:	global $wpdb;
+wp-includes/ms-default-constants.php:19:	global $wpdb;
+wp-includes/ms-default-constants.php:34:		define( 'UPLOADS', UPLOADBLOGSDIR . "/{$wpdb->blogid}/files/" );
+wp-includes/ms-default-constants.php:38:			define( 'BLOGUPLOADDIR', WP_CONTENT_DIR . "/blogs.dir/{$wpdb->blogid}/files/" );
+wp-includes/query.php:1920:		global $wpdb, $user_ID, $_wp_using_ext_object_cache;
+wp-includes/query.php:2036:				$fields = "$wpdb->posts.ID";
+wp-includes/query.php:2039:				$fields = "$wpdb->posts.ID, $wpdb->posts.post_parent";
+wp-includes/query.php:2042:				$fields = "$wpdb->posts.*";
+wp-includes/query.php:2046:			$where .= " AND $wpdb->posts.menu_order = " . $q['menu_order'];
+wp-includes/query.php:2051:			$where .= " AND YEAR($wpdb->posts.post_date)=" . substr($q['m'], 0, 4);
+wp-includes/query.php:2053:				$where .= " AND MONTH($wpdb->posts.post_date)=" . substr($q['m'], 4, 2);
+wp-includes/query.php:2055:				$where .= " AND DAYOFMONTH($wpdb->posts.post_date)=" . substr($q['m'], 6, 2);
+wp-includes/query.php:2057:				$where .= " AND HOUR($wpdb->posts.post_date)=" . substr($q['m'], 8, 2);
+wp-includes/query.php:2059:				$where .= " AND MINUTE($wpdb->posts.post_date)=" . substr($q['m'], 10, 2);
+wp-includes/query.php:2061:				$where .= " AND SECOND($wpdb->posts.post_date)=" . substr($q['m'], 12, 2);
+wp-includes/query.php:2065:			$where .= " AND HOUR($wpdb->posts.post_date)='" . $q['hour'] . "'";
+wp-includes/query.php:2068:			$where .= " AND MINUTE($wpdb->posts.post_date)='" . $q['minute'] . "'";
+wp-includes/query.php:2071:			$where .= " AND SECOND($wpdb->posts.post_date)='" . $q['second'] . "'";
+wp-includes/query.php:2074:			$where .= " AND YEAR($wpdb->posts.post_date)='" . $q['year'] . "'";
+wp-includes/query.php:2077:			$where .= " AND MONTH($wpdb->posts.post_date)='" . $q['monthnum'] . "'";
+wp-includes/query.php:2080:			$where .= " AND DAYOFMONTH($wpdb->posts.post_date)='" . $q['day'] . "'";
+wp-includes/query.php:2106:			$where .= " AND $wpdb->posts.post_name = '" . $q['name'] . "'";
+wp-includes/query.php:2135:				$where .= " AND ($wpdb->posts.ID = '$reqpage')";
+wp-includes/query.php:2147:			$where .= " AND $wpdb->posts.post_name = '" . $q['attachment'] . "'";
+wp-includes/query.php:2151:			$where .= ' AND ' . _wp_mysql_week( "`$wpdb->posts`.`post_date`" ) . " = '" . $q['w'] . "'";
+wp-includes/query.php:2162:			$where .= " AND {$wpdb->posts}.ID = " . $q['p'];
+wp-includes/query.php:2165:			$where .= " AND {$wpdb->posts}.ID IN ($post__in)";
+wp-includes/query.php:2168:			$where .= " AND {$wpdb->posts}.ID NOT IN ($post__not_in)";
+wp-includes/query.php:2172:			$where .= $wpdb->prepare( " AND $wpdb->posts.post_parent = %d ", $q['post_parent'] );
+wp-includes/query.php:2177:				$where = " AND {$wpdb->posts}.ID = " . $q['page_id'];
+wp-includes/query.php:2197:				$search .= "{$searchand}(($wpdb->posts.post_title LIKE '{$n}{$term}{$n}') OR ($wpdb->posts.post_content LIKE '{$n}{$term}{$n}'))";
+wp-includes/query.php:2204:					$search .= " AND ($wpdb->posts.post_password = '') ";
+wp-includes/query.php:2215:			$clauses = $this->tax_query->get_sql( $wpdb->posts, 'ID' );
+wp-includes/query.php:2284:			$groupby = "{$wpdb->posts}.ID";
+wp-includes/query.php:2306:				$_author_array[] = "$wpdb->posts.post_author " . $eq . ' ' . absint($_author);
+wp-includes/query.php:2326:			$whichauthor .= " AND ($wpdb->posts.post_author = " . absint($q['author']) . ')';
+wp-includes/query.php:2332:			$whichmimetype = wp_post_mime_type_where( $q['post_mime_type'], $wpdb->posts );
+wp-includes/query.php:2341:			$orderby = "$wpdb->posts.post_date " . $q['order'];
+wp-includes/query.php:2345:			$orderby = "FIELD( {$wpdb->posts}.ID, $post__in )";
+wp-includes/query.php:2365:						$orderby = "$wpdb->posts.menu_order";
+wp-includes/query.php:2368:						$orderby = "$wpdb->posts.ID";
+wp-includes/query.php:2375:						$orderby = "$wpdb->postmeta.meta_value";
+wp-includes/query.php:2378:						$orderby = "$wpdb->postmeta.meta_value+0";
+wp-includes/query.php:2381:						$orderby = "$wpdb->posts.comment_count";
+wp-includes/query.php:2384:						$orderby = "$wpdb->posts.post_" . $orderby;
+wp-includes/query.php:2392:				$orderby = "$wpdb->posts.post_date ".$q['order'];
+wp-includes/query.php:2408:				$where .= " AND $wpdb->posts.post_type IN ('" . join("', '", $in_search_post_types ) . "')";
+wp-includes/query.php:2410:			$where .= " AND $wpdb->posts.post_type IN ('" . join("', '", $post_type) . "')";
+wp-includes/query.php:2412:			$where .= " AND $wpdb->posts.post_type = '$post_type'";
+wp-includes/query.php:2415:			$where .= " AND $wpdb->posts.post_type = 'attachment'";
+wp-includes/query.php:2418:			$where .= " AND $wpdb->posts.post_type = 'page'";
+wp-includes/query.php:2421:			$where .= " AND $wpdb->posts.post_type = 'post'";
+wp-includes/query.php:2447:					$e_status[] = "$wpdb->posts.post_status <> '$status'";
+wp-includes/query.php:2452:							$p_status[] = "$wpdb->posts.post_status = '$status'";
+wp-includes/query.php:2454:							$r_status[] = "$wpdb->posts.post_status = '$status'";
+wp-includes/query.php:2469:					$statuswheres[] = "($wpdb->posts.post_author = $user_ID " . "AND (" . join( ' OR ', $r_status ) . "))";
+wp-includes/query.php:2475:					$statuswheres[] = "($wpdb->posts.post_author = $user_ID " . "AND (" . join( ' OR ', $p_status ) . "))";
+wp-includes/query.php:2480:				$join .= " LEFT JOIN $wpdb->posts AS p2 ON ($wpdb->posts.post_parent = p2.ID) ";
+wp-includes/query.php:2482:					$statuswheres[$index] = "($statuswhere OR ($wpdb->posts.post_status = 'inherit' AND " . str_replace($wpdb->posts, 'p2', $statuswhere) . "))";
+wp-includes/query.php:2487:			$where .= " AND ($wpdb->posts.post_status = 'publish'";
+wp-includes/query.php:2494:				$where .= " OR $wpdb->posts.post_status = '$state'";
+wp-includes/query.php:2501:					$where .= " OR $wpdb->posts.post_status = '$state'";
+wp-includes/query.php:2508:					$where .= current_user_can( $read_private_cap ) ? " OR $wpdb->posts.post_status = '$state'" : " OR $wpdb->posts.post_author = $user_ID AND $wpdb->posts.post_status = '$state'";
+wp-includes/query.php:2515:			$clauses = $this->meta_query->get_sql( 'post', $wpdb->posts, 'ID', $this );
+wp-includes/query.php:2545:				$cjoin = "JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) $join ";
+wp-includes/query.php:2547:				$cgroupby = "$wpdb->comments.comment_id";
+wp-includes/query.php:2549:				$cjoin = "JOIN $wpdb->posts ON ( $wpdb->comments.comment_post_ID = $wpdb->posts.ID )";
+wp-includes/query.php:2575:				$where = "AND $wpdb->posts.ID IN ($post_ids) ";
+wp-includes/query.php:2634:			$this->posts = $wpdb->get_col( $this->request );
+wp-includes/query.php:2642:			$this->posts = $wpdb->get_results( $this->request );
+wp-includes/query.php:2653:		$split_the_query = ( $old_request == $this->request && "$wpdb->posts.*" == $fields && !empty( $limits ) && $q['posts_per_page'] < 500 );
+wp-includes/query.php:2663:			$ids = $wpdb->get_col( $this->request );
+wp-includes/query.php:2673:			$this->posts = $wpdb->get_results( $this->request );
+wp-includes/query.php:2694:			$this->comments = $wpdb->get_results($comments_request);
+wp-includes/query.php:2801:		global $wpdb;
+wp-includes/query.php:3563: * @uses $wpdb
+wp-includes/query.php:3570:		global $wpdb;
+wp-includes/query.php:3595:			$query .= $wpdb->prepare(" AND YEAR(post_date) = %d", $wp_query->query_vars['year']);
+wp-includes/query.php:3597:			$query .= $wpdb->prepare(" AND MONTH(post_date) = %d", $wp_query->query_vars['monthnum']);
+wp-includes/query.php:3599:			$query .= $wpdb->prepare(" AND DAYOFMONTH(post_date) = %d", $wp_query->query_vars['day']);
+wp-includes/query.php:3601:		$id = (int) $wpdb->get_var($query);
+wp-includes/general-template.php:522:	global $wpdb, $wp_locale;
+wp-includes/general-template.php:872:	global $wpdb, $wp_locale;
+wp-includes/general-template.php:926:			$arcresults = $wpdb->get_results($query);
+wp-includes/general-template.php:948:			$arcresults = $wpdb->get_results($query);
+wp-includes/general-template.php:969:			$arcresults = $wpdb->get_results($query);
+wp-includes/general-template.php:992:			$arcresults = $wpdb->get_results($query);
+wp-includes/general-template.php:1022:			$arcresults = $wpdb->get_results($query);
+wp-includes/general-template.php:1074:	global $wpdb, $m, $monthnum, $year, $wp_locale, $posts;
+wp-includes/general-template.php:1133:		FROM $wpdb->posts
+wp-includes/general-template.php:1139:		FROM $wpdb->posts
+wp-includes/general-template.php:1194:		FROM $wpdb->posts WHERE post_date >= '{$thisyear}-{$thismonth}-01 00:00:00'
+wp-includes/general-template.php:1212:		."FROM $wpdb->posts "
+wp-includes/update.php:26:	global $wpdb, $wp_local_package;
+wp-includes/update.php:49:	if ( method_exists( $wpdb, 'db_version' ) )
+wp-includes/update.php:50:		$mysql_version = preg_replace('/[^0-9.].*/', '', $wpdb->db_version());
+wp-includes/ms-functions.php:20:	global $wpdb;
+wp-includes/ms-functions.php:40:	global $wpdb;
+wp-includes/ms-functions.php:43:		$site_id = $wpdb->siteid;
+wp-includes/ms-functions.php:71:	global $wpdb;
+wp-includes/ms-functions.php:77:		return $blogs[$wpdb->blogid];
+wp-includes/ms-functions.php:100:				if ( $blog->site_id != $wpdb->siteid )
+wp-includes/ms-functions.php:219:	global $wpdb;
+wp-includes/ms-functions.php:260:		$wpdb->query( $wpdb->prepare("UPDATE $wpdb->posts SET post_author = %d WHERE post_author = %d", $reassign, $user_id) );
+wp-includes/ms-functions.php:261:		$wpdb->query( $wpdb->prepare("UPDATE $wpdb->links SET link_owner = %d WHERE link_owner = %d", $reassign, $user_id) );
+wp-includes/ms-functions.php:292:	// Need to back up wpdb table names, and create a new wp_blogs entry for new blog.
+wp-includes/ms-functions.php:338:	global $wpdb;
+wp-includes/ms-functions.php:431:	global $wpdb;
+wp-includes/ms-functions.php:497:			$wpdb->delete( $wpdb->signups, array( 'user_login' => $user_name ) );
+wp-includes/ms-functions.php:510:			$wpdb->delete( $wpdb->signups, array( 'user_email' => $user_email ) );
+wp-includes/ms-functions.php:543:	global $wpdb, $domain, $current_site;
+wp-includes/ms-functions.php:615:			$wpdb->delete( $wpdb->signups, array( 'domain' => $mydomain , 'path' => $path ) );
+wp-includes/ms-functions.php:638:	global $wpdb;
+wp-includes/ms-functions.php:642:	$domain = $wpdb->escape($domain);
+wp-includes/ms-functions.php:643:	$path = $wpdb->escape($path);
+wp-includes/ms-functions.php:644:	$title = $wpdb->escape($title);
+wp-includes/ms-functions.php:646:	$wpdb->insert( $wpdb->signups, array(
+wp-includes/ms-functions.php:674:	global $wpdb;
+wp-includes/ms-functions.php:682:	$wpdb->insert( $wpdb->signups, array(
+wp-includes/ms-functions.php:832:	global $wpdb, $current_site;
+wp-includes/ms-functions.php:847:	$user_login = $wpdb->escape($signup->user_login);
+wp-includes/ms-functions.php:848:	$user_email = $wpdb->escape($signup->user_email);
+wp-includes/ms-functions.php:864:		$wpdb->update( $wpdb->signups, array('active' => 1, 'activated' => $now), array('activation_key' => $key) );
+wp-includes/ms-functions.php:876:	$blog_id = wpmu_create_blog( $signup->domain, $signup->path, $signup->title, $user_id, $meta, $wpdb->siteid );
+wp-includes/ms-functions.php:884:			$wpdb->update( $wpdb->signups, array( 'active' => 1, 'activated' => $now ), array( 'activation_key' => $key ) );
+wp-includes/ms-functions.php:889:	$wpdb->update( $wpdb->signups, array('active' => 1, 'activated' => $now), array('activation_key' => $key) );
+wp-includes/ms-functions.php:1086:	global $wpdb;
+wp-includes/ms-functions.php:1105:	global $wpdb;
+wp-includes/ms-functions.php:1110:	$result = $wpdb->insert( $wpdb->blogs, array('site_id' => $site_id, 'domain' => $domain, 'path' => $path, 'registered' => current_time('mysql')) );
+wp-includes/ms-functions.php:1114:	refresh_blog_details($wpdb->insert_id);
+wp-includes/ms-functions.php:1115:	return $wpdb->insert_id;
+wp-includes/ms-functions.php:1122: * directly, be sure to use switch_to_blog() first, so that $wpdb
+wp-includes/ms-functions.php:1133:	global $wpdb, $wp_roles, $current_site;
+wp-includes/ms-functions.php:1140:	$wpdb->suppress_errors();
+wp-includes/ms-functions.php:1141:	if ( $wpdb->get_results( "DESCRIBE {$wpdb->posts}" ) )
+wp-includes/ms-functions.php:1143:	$wpdb->suppress_errors( false );
+wp-includes/ms-functions.php:1167:	$table_prefix = $wpdb->get_blog_prefix();
+wp-includes/ms-functions.php:1186:	global $wpdb;
+wp-includes/ms-functions.php:1190:	$wpdb->suppress_errors();
+wp-includes/ms-functions.php:1194:	$wpdb->suppress_errors( false );
+wp-includes/ms-functions.php:1365:	global $wpdb;
+wp-includes/ms-functions.php:1373:		$prefix = $wpdb->get_blog_prefix( $blog->userblog_id );
+wp-includes/ms-functions.php:1498:	global $wpdb;
+wp-includes/ms-functions.php:1511:	global $wpdb;
+wp-includes/ms-functions.php:1513:	$wpdb->insert( $wpdb->registration_log, array('email' => $user->user_email, 'IP' => preg_replace( '/[^0-9., ]/', '',$_SERVER['REMOTE_ADDR'] ), 'blog_id' => $blog_id, 'date_registered' => current_time('mysql')) );
+wp-includes/ms-functions.php:1527:	global $wpdb;
+wp-includes/ms-functions.php:1549:			$wpdb->insert( $wpdb->sitecategories, array( 'cat_ID' => $term_id, 'cat_name' => $c->name, 'category_nicename' => $c->slug ) );
+wp-includes/ms-functions.php:1550:			$global_id = $wpdb->insert_id;
+wp-includes/ms-functions.php:1557:			$wpdb->insert( $wpdb->sitecategories, array( 'cat_ID' => $new_global_id, 'cat_name' => $c->name, 'category_nicename' => $c->slug ) );
+wp-includes/ms-functions.php:1558:			$global_id = $wpdb->insert_id;
+wp-includes/ms-functions.php:1572:		$wpdb->update( $wpdb->terms, array('term_id' => $global_id), array('term_id' => $term_id) );
+wp-includes/ms-functions.php:1573:		$wpdb->update( $wpdb->term_taxonomy, array('term_id' => $global_id), array('term_id' => $term_id) );
+wp-includes/ms-functions.php:1574:		$wpdb->update( $wpdb->term_taxonomy, array('parent' => $global_id), array('parent' => $term_id) );
+wp-includes/ms-functions.php:1773:	global $wpdb;
+wp-includes/ms-functions.php:1775:	update_blog_status( $wpdb->blogid, 'public', (int) $value );
+wp-includes/ms-functions.php:1806:	global $wpdb;
+wp-includes/ms-functions.php:1812:		$blog_id = $wpdb->blogid;
+wp-includes/ms-functions.php:1814:	$local_key = $wpdb->get_blog_prefix( $blog_id ) . $key;
+wp-includes/ms-functions.php:1926:	global $wpdb;
+wp-includes/post-template.php:401:	global $wp_query, $wpdb;
+wp-includes/author-template.php:267:	global $wpdb;
+wp-includes/author-template.php:373:	global $wpdb;
+wp-includes/bookmark.php:13: * @uses $wpdb Database Object
+wp-includes/bookmark.php:21:	global $wpdb;
+wp-includes/bookmark.php:115: * @uses $wpdb Database Object
+wp-includes/bookmark.php:122:	global $wpdb;
+wp-includes/bookmark.php:208:		$join = " INNER JOIN $wpdb->term_relationships AS tr ON ($wpdb->links.link_id = tr.object_id) INNER JOIN $wpdb->term_taxonomy as tt ON tt.term_taxonomy_id = tr.term_taxonomy_id";
+wp-includes/bookmark.php:229:			$orderby = "$wpdb->links.link_id";
+wp-includes/bookmark.php:261:	$results = $wpdb->get_results($query);
+wp-login.php:179: * @uses $wpdb WordPress Database object
+wp-login.php:184:	global $wpdb, $current_site;
+wp-login.php:229:		$wpdb->update($wpdb->users, array('user_activation_key' => $key), array('user_login' => $user_login));
+wp-login.php:259: * @uses $wpdb WordPress Database object
+wp-login.php:266:	global $wpdb;
+wp-settings.php:31:// Disable magic quotes at runtime. Magic quotes are added using wpdb later in wp-settings.php.
+wp-settings.php:71:// Include the wpdb class and, if present, a db.php database drop-in.
+wp-settings.php:76:wp_set_wpdb_vars();
+wp-signup.php:195:	global $wpdb, $blogname, $blog_title, $errors, $domain, $path;
+wp-signup.php:212:	wpmu_create_blog( $domain, $path, $blog_title, $current_user->ID, $meta, $wpdb->siteid );
+wp-trackback.php:68:$title     = $wpdb->escape($title);
+wp-trackback.php:69:$excerpt   = $wpdb->escape($excerpt);
+wp-trackback.php:70:$blog_name = $wpdb->escape($blog_name);
+wp-trackback.php:108:	do_action('trackback_post', $wpdb->insert_id);

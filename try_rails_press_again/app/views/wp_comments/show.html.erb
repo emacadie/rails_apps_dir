@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Comment id:</b>
+  <%= @wp_comment.comment_ID %>
+</p>
+
+<p>
+  <b>Comment post id:</b>
+  <%= @wp_comment.comment_post_ID %>
+</p>
+
+<p>
+  <b>Comment author:</b>
+  <%= @wp_comment.comment_author %>
+</p>
+
+<p>
+  <b>Comment author email:</b>
+  <%= @wp_comment.comment_author_email %>
+</p>
+
+<p>
+  <b>Comment author url:</b>
+  <%= @wp_comment.comment_author_url %>
+</p>
+
+<p>
+  <b>Comment author ip:</b>
+  <%= @wp_comment.comment_author_IP %>
+</p>
+
+<p>
+  <b>Comment date:</b>
+  <%= @wp_comment.comment_date %>
+</p>
+
+<p>
+  <b>Comment date gmt:</b>
+  <%= @wp_comment.comment_date_gmt %>
+</p>
+
+<p>
+  <b>Comment content:</b>
+  <%= @wp_comment.comment_content %>
+</p>
+
+<p>
+  <b>Comment karma:</b>
+  <%= @wp_comment.comment_karma %>
+</p>
+
+<p>
+  <b>Comment approved:</b>
+  <%= @wp_comment.comment_approved %>
+</p>
+
+<p>
+  <b>Comment agent:</b>
+  <%= @wp_comment.comment_agent %>
+</p>
+
+<p>
+  <b>Comment type:</b>
+  <%= @wp_comment.comment_type %>
+</p>
+
+<p>
+  <b>Comment parent:</b>
+  <%= @wp_comment.comment_parent %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @wp_comment.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_wp_comment_path(@wp_comment) %> |
+<%= link_to 'Back', wp_comments_path %>

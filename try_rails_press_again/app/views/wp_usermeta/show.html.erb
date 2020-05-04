@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Umeta:</b>
+  <%= @wp_usermetum.umeta_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @wp_usermetum.user_id %>
+</p>
+
+<p>
+  <b>Meta key:</b>
+  <%= @wp_usermetum.meta_key %>
+</p>
+
+<p>
+  <b>Meta value:</b>
+  <%= @wp_usermetum.meta_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_wp_usermetum_path(@wp_usermetum) %> |
+<%= link_to 'Back', wp_usermeta_path %>
